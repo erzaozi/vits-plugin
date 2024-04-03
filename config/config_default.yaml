@@ -8,3 +8,4 @@ tts_sync_config:
     use_model_type: Bert-VITS2
     use_interface_sources: Modelscope
     use_speaker: 星瞳坏女人
+genshin_tts_token: db6704a35055631bc6ba29c26d995f62

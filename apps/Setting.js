@@ -81,6 +81,14 @@ export class setting extends plugin {
           reg: '^[/#]?vits发音人$',
           /** 执行方法 */
           fnc: 'getSpeaker',
+        },
+        {
+          /** 命令正则匹配 */
+          reg: '^[/#]?vits设置原神密钥.*$',
+          /** 执行方法 */
+          fnc: 'setGenshinKey',
+          /** 主人权限 */
+          permission: 'master'
         }
       ]
     })
@@ -125,7 +133,7 @@ export class setting extends plugin {
     if (sources.includes(message)) {
       config.tts_config.use_interface_sources = message;
       await Config.setConfig(config)
-      e.reply(`源设置成功，当前源为：${message}`)
+      e.reply(`源设置成功，当前源为：${message}，请发送【#vits模型】查看支持的模型类型`);
     } else {
       e.reply('源不存在，请发送【#vits源】查看支持的源');
     }
@@ -271,6 +279,11 @@ export class setting extends plugin {
     const config = await Config.getConfig();
     const userSyncConfig = config.tts_sync_config.find(item => item.user_id === e.user_id);
 
+    if (!userSyncConfig) {
+      e.reply('请先发送【#vits开启同传】开启同传功能');
+      return true;
+    }
+
     const dataPath = path.join(pluginResources, userSyncConfig.use_model_type, userSyncConfig.use_interface_sources + '.json');
     const data = JSON.parse(fs.readFileSync(dataPath));
     const speakersList = data.space.map((sp, index) => `${index + 1}.${sp.name}`).join('\n');
@@ -282,5 +295,18 @@ export class setting extends plugin {
 
     e.reply(msg);
     return true;
+  }
+
+  async setGenshinKey(e) {
+    const config = await Config.getConfig();
+    const message = e.msg.replace(/^[/#]?vits设置原神密钥/, '').trim();
+    if (message) {
+      config.tts_config.genshin_key = message;
+      await Config.setConfig(config);
+      e.reply('原神语音合成密钥设置成功');
+    } else {
+      e.reply('请发前往\nhttps://tts.ai-hobbyist.org/#/apikey\n获取原神语音合成密钥');
+      return true;
+    }
   }
 }

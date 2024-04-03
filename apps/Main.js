@@ -1,6 +1,8 @@
 import plugin from '../../../lib/plugins/plugin.js'
 import Config from '../components/Config.js'
-import { TextToSpeech } from '../components/Bert-VITS2.js'
+import { TextToSpeech as BertVITSTextToSpeech } from '../components/Bert-VITS2.js';
+import { TextToSpeech as GPTSoVITSTextToSpeech } from '../components/GPT-SoVITS.js';
+import { TextToSpeech as GenshinTTSTextToSpeech } from '../components/Genshin-TTS.js';
 import { getRecord } from '../components/Record.js'
 
 export class vits_sync extends plugin {
@@ -33,8 +35,17 @@ export class vits_sync extends plugin {
       if (!c || !c.use_speaker) return false;
 
       if (!c.enable_group.includes(e.group_id)) return false;
-  
-      const url = await TextToSpeech(c.use_speaker, e.msg, c);
+
+      let url;
+
+      if (c.use_model_type == 'GPT-SoVITS') {
+        url = await GPTSoVITSTextToSpeech(c.use_speaker, e.msg, c);
+      } else if (c.use_model_type == 'Genshin-TTS') {
+        url = await GenshinTTSTextToSpeech(c.use_speaker, e.msg, c);
+      } else {
+        url = await BertVITSTextToSpeech(c.use_speaker, e.msg, c);
+      }
+
       if (!url) return false;
   
       const base64 = await getRecord(url);
