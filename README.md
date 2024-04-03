@@ -1,5 +1,7 @@
 <div align="center">
-  
+
+![nakiri_ayame, horns, virtual_youtuber, red_eyes, long_hair ,white background,fal s-1857591336](https://github.com/erzaozi/vits-plugin/assets/61369914/8b2e826a-7aa3-45a8-b58a-93f8e66d7d14)
+
 # VITS-PLUGIN
 
 </div>
