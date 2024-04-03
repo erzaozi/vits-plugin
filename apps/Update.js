@@ -20,7 +20,7 @@ export class Update extends plugin {
       priority: 1009,
       rule: [
         {
-          reg: '^#VITS((插件)?(强制)?更新| update)$',
+          reg: '^#vits((插件)?(强制)?更新| update)$',
           fnc: 'update'
         }
       ]

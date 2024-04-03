@@ -3,6 +3,7 @@ import plugin from '../../../lib/plugins/plugin.js'
 import Config from '../components/Config.js'
 import Init from '../model/init.js'
 import fs from 'fs';
+import path from 'path';
 
 export class setting extends plugin {
   constructor() {
@@ -117,10 +118,12 @@ export class setting extends plugin {
 
   async setSource(e) {
     let config = await Config.getConfig()
-    const sources = fs.readdirSync(path.join(pluginResources, config.tts_config.use_model_type)).filter(file => file.endsWith('.json'));
+    const sources = fs.readdirSync(path.join(pluginResources, config.tts_config.use_model_type))
+      .filter(file => file.endsWith('.json'))
+      .map(file => file.replace('.json', ''));
     const message = e.msg.replace(/^[/#]?vits设置源/, '').trim();
     if (sources.includes(message)) {
-      config.tts_config.use_source = message;
+      config.tts_config.use_interface_sources = message;
       await Config.setConfig(config)
       e.reply(`源设置成功，当前源为：${message}`)
     } else {
@@ -129,34 +132,29 @@ export class setting extends plugin {
     return true
   }
 
-  async setSource(e) {
+  async getSource(e) {
     const config = await Config.getConfig();
     const directory = path.join(pluginResources, config.tts_config.use_model_type);
     const sources = fs.readdirSync(directory).filter(file => file.endsWith('.json'));
-    const source = e.msg.replace(/^[/#]?vits设置源/, '').trim();
 
-    if (sources.includes(source)) {
-      config.tts_config.use_source = source;
-      await Config.setConfig(config);
-      e.reply(`源设置成功，当前源为：${source}`);
-    } else {
-      e.reply('源不存在，请发送【#vits源】查看支持的源');
-    }
+    const supportedSources = sources.map((source, index) => `${index + 1}.${source.replace('.json', '')}`).join('\n');
+    const msg = `当前源为：${config.tts_config.use_interface_sources}\n支持的源有：\n${supportedSources}`;
 
+    e.reply(msg);
     return true;
   }
 
   async setTip(e) {
     const config = await Config.getConfig();
-    const message = e.msg.replace(/^[/#]?vits(开启|关闭)提示/, '').trim();
+    const message = e.msg.replace(/^[/#]?vits/, '').trim();
 
     switch (message) {
-      case '开启':
+      case '开启提示':
         config.tts_config.send_reminder = true;
         await Config.setConfig(config);
         e.reply('提示已开启');
         break;
-      case '关闭':
+      case '关闭提示':
         config.tts_config.send_reminder = false;
         await Config.setConfig(config);
         e.reply('提示已关闭');
@@ -169,11 +167,15 @@ export class setting extends plugin {
   }
 
   async setSync(e) {
+    if (!e.group_id) {
+      e.reply('请在群聊中开关此功能')
+      return true
+    }
     const config = await Config.getConfig();
-    const message = e.msg.replace(/^[/#]?vits(开启|关闭)同传/, '').trim();
+    const message = e.msg.replace(/^[/#]?vits/, '').trim();
     const userConfig = config.tts_sync_config.find(item => item.user_id === e.user_id);
 
-    if (message === '开启') {
+    if (message === '开启同传') {
       if (userConfig) {
         if (!userConfig.enable_group.includes(e.group_id)) {
           userConfig.enable_group.push(e.group_id);
@@ -194,7 +196,7 @@ export class setting extends plugin {
         await Config.setConfig(config);
         e.reply('当前群聊同传已开启，使用发音人：塔菲');
       }
-    } else if (message === '关闭') {
+    } else if (message === '关闭同传') {
       if (userConfig && userConfig.enable_group.includes(e.group_id)) {
         const index = userConfig.enable_group.indexOf(e.group_id);
         userConfig.enable_group.splice(index, 1);
@@ -226,8 +228,9 @@ export class setting extends plugin {
   async setSyncSource(e) {
     const config = await Config.getConfig();
     const userSyncConfig = config.tts_sync_config.find(item => item.user_id === e.user_id);
-    const sources = fs.readdirSync(path.join(pluginResources, userSyncConfig.use_model_type))
-      .filter(file => file.endsWith('.json'));
+    const sources = fs.readdirSync(path.join(pluginResources, config.tts_config.use_model_type))
+      .filter(file => file.endsWith('.json'))
+      .map(file => file.replace('.json', ''));
     const message = e.msg.replace(/^[/#]?vits设置同传源/, '').trim();
 
     if (sources.includes(message)) {
@@ -247,6 +250,10 @@ export class setting extends plugin {
     const speakersDataPath = path.join(pluginResources, userSyncConfig.use_model_type, userSyncConfig.use_interface_sources + '.json');
     const speakersData = JSON.parse(fs.readFileSync(speakersDataPath));
     const speakerName = e.msg.replace(/^[/#]?vits设置同传发音人/, '').trim();
+    if (!speakerName) {
+      e.reply('发音人不存在，请发送【#vits发音人】查看支持的发音人')
+      return true
+    }
     const speakerEntry = speakersData.space.find(sp => sp.name === speakerName || sp.name.includes(speakerName));
 
     if (speakerEntry) {
@@ -260,7 +267,7 @@ export class setting extends plugin {
     return true;
   }
 
-  async getSyncSpeaker(e) {
+  async getSpeaker(e) {
     const config = await Config.getConfig();
     const userSyncConfig = config.tts_sync_config.find(item => item.user_id === e.user_id);
 
