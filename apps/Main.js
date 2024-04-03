@@ -3,7 +3,7 @@ import Config from '../components/Config.js'
 import { TextToSpeech } from '../components/Bert-VITS2.js'
 import { getRecord } from '../components/Record.js'
 
-export class neko_status extends plugin {
+export class vits_sync extends plugin {
   constructor() {
     super({
       /** 功能名称 */
@@ -31,8 +31,10 @@ export class neko_status extends plugin {
       const { tts_sync_config: config } = await Config.getConfig();
       const c = config.find(item => item.user_id === e.user_id);
       if (!c || !c.use_speaker) return false;
+
+      if (!c.enable_group.includes(e.group_id)) return false;
   
-      const url = await TextToSpeech(e.user_id, c.use_speaker, c);
+      const url = await TextToSpeech(c.use_speaker, e.msg, c);
       if (!url) return false;
   
       const base64 = await getRecord(url);

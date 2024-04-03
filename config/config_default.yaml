@@ -7,4 +7,4 @@ tts_sync_config:
     enable_group: []
     use_model_type: Bert-VITS2
     use_interface_sources: Modelscope
-    use_speeaker: 塔菲
+    use_speaker: 星瞳坏女人
