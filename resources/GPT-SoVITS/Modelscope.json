@@ -141,7 +141,7 @@
         {
             "name": "嘉然",
             "speaker": "你们会不会用那种睡觉神器小然之前有看到一位，就经常分享日常小妙招的一位阿姨她有提到过。",
-            "url": "ss://www.modelscope.cn/api/v1/studio/xzjosh/Diana-GPT-SoVITS/gradio/queue/join",
+            "url": "wss://www.modelscope.cn/api/v1/studio/xzjosh/Diana-GPT-SoVITS/gradio/queue/join",
             "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Diana-GPT-SoVITS/gradio/file="
         },
         {

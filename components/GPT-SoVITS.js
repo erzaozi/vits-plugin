@@ -5,7 +5,6 @@ import ws from 'ws';
 const other_params = ["中文", "中文", "不切"];
 
 export async function TextToSpeech(speaker, text, config) {
-    logger.info("[GPT-SoVITS] 正在生成语音文件...");
     const pluginPath = `${pluginResources}/GPT-SoVITS/${config.use_interface_sources}.json`;
     const jsonData = fs.readFileSync(pluginPath);
     const data = JSON.parse(jsonData);
@@ -34,7 +33,6 @@ async function getVoice(space, text, source) {
 }
 
 async function getModelscopeVoice(space, text) {
-    logger.info("[GPT-SoVITS] 正在生成语音文件...");
     return new Promise((resolve, reject) => {
         let hash = Math.random().toString(36).substring(2, 12);
         let ws_client = new ws(space.url);
@@ -72,7 +70,6 @@ async function getModelscopeVoice(space, text) {
                     }
                 case "process_completed":
                     ws_client.close();
-                    logger.info(event.output.data)
                     if (event.success) {
                         let file_url = event.output.data[0].name;
                         resolve(file_url);
@@ -112,7 +109,7 @@ function getHuggingfaceVoice(space, text) {
                 case "send_hash":
                     ws_client.send(JSON.stringify({
                         session_hash: hash,
-                        fn_index: 0,
+                        fn_index: 1,
                     }));
                     break;
                 case "estimation":
@@ -121,8 +118,8 @@ function getHuggingfaceVoice(space, text) {
                     };
                 case "send_data":
                     ws_client.send(JSON.stringify({
-                        "data": [text, space.speaker, ...other_params],
-                        "fn_index": 0,
+                        "data": [space.speaker, space.speaker, other_params[0], text, ...other_params.slice(1)],
+                        "fn_index": 1,
                         "session_hash": hash,
                     }));
                     break;
@@ -130,10 +127,14 @@ function getHuggingfaceVoice(space, text) {
                     {
                         break;
                     }
+                case "process_generating" :
+                    {
+                        break;
+                    }
                 case "process_completed":
                     ws_client.close();
-                    if (event.output.data[0] == 'Success') {
-                        let file_url = event.output.data[1].name;
+                    if (event.success) {
+                        let file_url = event.output.data[0].name;
                         resolve(file_url);
                     } else {
                         reject(event.output.data);
