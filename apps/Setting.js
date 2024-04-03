@@ -188,9 +188,9 @@ export class setting extends plugin {
         if (!userConfig.enable_group.includes(e.group_id)) {
           userConfig.enable_group.push(e.group_id);
           await Config.setConfig(config);
-          e.reply(`当前群聊同传已开启，使用发音人：${userConfig.use_speeaker}`);
+          e.reply(`当前群聊同传已开启，使用发音人：${userConfig.use_speaker}`);
         } else {
-          e.reply(`当前群聊同传已在使用，发音人：${userConfig.use_speeaker}`);
+          e.reply(`当前群聊同传已在使用，发音人：${userConfig.use_speaker}`);
         }
       } else {
         const newUserConfig = {
@@ -198,7 +198,7 @@ export class setting extends plugin {
           enable_group: [e.group_id],
           use_model_type: 'Bert-VITS2',
           use_interface_sources: 'Modelscope',
-          use_speeaker: '塔菲',
+          use_speaker: '塔菲',
         };
         config.tts_sync_config.push(newUserConfig);
         await Config.setConfig(config);

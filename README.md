@@ -191,7 +191,7 @@ pnpm install --filter=vits-plugin
 | send_reminder | `true` | 提示任务已经开始 |
 | user_id | String | 开启同传的账号 |
 | enable_group | Array | 开启同传的群聊 |
-| use_speeaker | `塔菲` | 同传时使用的角色名称 |
+| use_speaker | `塔菲` | 同传时使用的角色名称 |
 | genshin_tts_token | `db6704a35055631bc6ba29c26d995f62` | 原神语音合成密钥 |
 
 ## 😸 使用
