@@ -14,7 +14,7 @@ export class vits_sync extends plugin {
       dsc: '同声传译',
       event: 'message',
       /** 优先级，数字越小等级越高 */
-      priority: 1009,
+      priority: 99999,
       rule: [
         {
           /** 命令正则匹配 */
