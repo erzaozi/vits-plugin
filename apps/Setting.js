@@ -301,7 +301,7 @@ export class setting extends plugin {
     const config = await Config.getConfig();
     const message = e.msg.replace(/^[/#]?vits设置原神密钥/, '').trim();
     if (message) {
-      config.genshin_key = message;
+      config.genshin_tts_token = message;
       await Config.setConfig(config);
       e.reply('原神语音合成密钥设置成功');
     } else {
