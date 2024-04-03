@@ -13,7 +13,7 @@ export function supportGuoba() {
       link: 'https://github.com/erzaozi/vits-plugin',
       isV3: true,
       isV2: false,
-      description: '基于Yunzai-Bot的系统状态插件喵~',
+      description: '基于Yunzai-Bot的语音合成插件',
       // 显示图标，此为个性化配置
       // 图标可在 https://icon-sets.iconify.design 这里进行搜索
       icon: 'mdi:stove',
