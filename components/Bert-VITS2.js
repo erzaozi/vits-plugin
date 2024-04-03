@@ -1,5 +1,4 @@
 import { pluginResources } from '../model/path.js';
-import Config from './Config.js';
 import fs from 'fs';
 import fetch from 'node-fetch';
 import ws from 'ws';
