@@ -1,6 +1,7 @@
 import plugin from '../../../lib/plugins/plugin.js'
 import Config from '../components/Config.js'
 import { TextToSpeech } from '../components/Bert-VITS2.js'
+import { getRecord } from '../components/Record.js'
 
 export class neko_status extends plugin {
   constructor() {
@@ -25,17 +26,21 @@ export class neko_status extends plugin {
 
   async sync(e) {
     try {
-      if (!e.group_id) return false
-      let config = await Config.getConfig().tts_sync_config;
-      let c = config.find(item => item.user_id === e.user_id);
-      if (!c) return false
-      let a = c.use_speeaker
-      let url = await TextToSpeech(i, a, c);
-      if (!url) return false
-      await e.reply(segment.record(url))
+      if (!e.group_id || !e.user_id) return false;
+  
+      const { tts_sync_config: config } = await Config.getConfig();
+      const c = config.find(item => item.user_id === e.user_id);
+      if (!c || !c.use_speaker) return false;
+  
+      const url = await TextToSpeech(e.user_id, c.use_speaker, c);
+      if (!url) return false;
+  
+      const base64 = await getRecord(url);
+      await e.reply(segment.record(`base64://${base64}`));
+      return false;
     } catch (err) {
-      console.log(err)
+      console.log(err);
+      return false;
     }
-    return false
   }
 }
