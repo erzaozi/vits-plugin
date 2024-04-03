@@ -1,12 +1,12 @@
 import { pluginResources } from '../model/path.js';
 import fs from 'fs';
-import fetch from 'node-fetch';
 import ws from 'ws';
 
-const other_params = [0.6, 0.5, 0.9, 1, "ZH", null, "Happy", "Text prompt", "", 0.7];
+const other_params = ["中文", "中文", "不切"];
 
 export async function TextToSpeech(speaker, text, config) {
-    const pluginPath = `${pluginResources}/Bert-VITS2/${config.use_interface_sources}.json`;
+    logger.info("[GPT-SoVITS] 正在生成语音文件...");
+    const pluginPath = `${pluginResources}/GPT-SoVITS/${config.use_interface_sources}.json`;
     const jsonData = fs.readFileSync(pluginPath);
     const data = JSON.parse(jsonData);
 
@@ -34,30 +34,68 @@ async function getVoice(space, text, source) {
 }
 
 async function getModelscopeVoice(space, text) {
-    const data = {
-        "data": [text, space.speaker, ...other_params],
-        "fn_index": 0,
-        "session_hash": Math.random().toString(36).substring(2, 13)
-    };
+    logger.info("[GPT-SoVITS] 正在生成语音文件...");
+    return new Promise((resolve, reject) => {
+        let hash = Math.random().toString(36).substring(2, 12);
+        let ws_client = new ws(space.url);
 
-    const result = await fetchPost(space.url, data);
-    if (result && result.data[0] == 'Success') {
-        return result.data[1].name;
-    }
-    return null;
-}
-
-async function fetchPost(url, data) {
-    try {
-        const response = await fetch(url, {
-            method: 'POST',
-            body: JSON.stringify(data),
+        ws_client.on("open", () => {
         });
-        return response.json();
-    } catch (error) {
-        logger.error(error)
-        return null;
-    }
+
+        ws_client.on("message", event => {
+            event = JSON.parse(event);
+            switch (event.msg) {
+                case "send_hash":
+                    ws_client.send(JSON.stringify({
+                        session_hash: hash,
+                        fn_index: 1,
+                    }));
+                    break;
+                case "estimation":
+                    {
+                        break;
+                    };
+                case "send_data":
+                    ws_client.send(JSON.stringify({
+                        "data": [space.speaker, space.speaker, other_params[0], text, ...other_params.slice(1)],
+                        "fn_index": 1,
+                        "session_hash": hash,
+                    }));
+                    break;
+                case "process_starts":
+                    {
+                        break;
+                    }
+                case "process_generating" :
+                    {
+                        break;
+                    }
+                case "process_completed":
+                    ws_client.close();
+                    logger.info(event.output.data)
+                    if (event.success) {
+                        let file_url = event.output.data[0].name;
+                        resolve(file_url);
+                    } else {
+                        reject(event.output.data);
+                    }
+                    break;
+                case "process_failed":
+                    ws_client.close();
+                    reject(event.output.data);
+                    break;
+            }
+        });
+
+        ws_client.on("error", error => {
+            ws_client.close();
+            reject(error);
+        });
+
+        ws_client.on("close", () => {
+
+        });
+    });
 }
 
 function getHuggingfaceVoice(space, text) {

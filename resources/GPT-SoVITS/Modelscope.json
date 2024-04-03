@@ -1,0 +1,154 @@
+{
+    "space": [
+        {
+            "name": "张顺飞",
+            "speaker": "哪里可以买到号你买到号有什么用呢有我这种实力吗？笨蛋。",
+            "url": "wss://www.modelscope.cn/api/v1/studio/xzjosh/Shun-GPT-SoVITS/gradio/queue/join",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Shun-GPT-SoVITS/gradio/file="
+        },
+        {
+            "name": "蔡徐坤",
+            "speaker": "全民制作人们大家好，我是练习时长两年半的个人练习生蔡徐坤。",
+            "url": "wss://www.modelscope.cn/api/v1/studio/xzjosh/Kun-GPT-SoVITS/gradio/queue/join",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Kun-GPT-SoVITS/gradio/file="
+        },
+        {
+            "name": "米诺",
+            "speaker": "到底什么爆了我请问到底是什么爆了！玩了一年~的梗，还~没玩腻？",
+            "url": "wss://www.modelscope.cn/api/v1/studio/xzjosh/Mino-GPT-SoVITS/gradio/queue/join",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Mino-GPT-SoVITS/gradio/file="
+        },
+        {
+            "name": "陈泽",
+            "speaker": "老所有哥们儿现在给我黑白关注的给我一字放老铁们，掉一万粉丝了他还不疼，黑白。",
+            "url": "wss://www.modelscope.cn/api/v1/studio/xzjosh/Ze-GPT-SoVITS/gradio/queue/join",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Ze-GPT-SoVITS/gradio/file="
+        },
+        {
+            "name": "电棍",
+            "speaker": "那不得累死啊，倒啥样我怎么开啊，八十八点六千瓦，通电了。",
+            "url": "wss://www.modelscope.cn/api/v1/studio/xzjosh/otto-GPT-SoVITS/gradio/queue/join",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/otto-GPT-SoVITS/gradio/file="
+        },
+        {
+            "name": "炫神",
+            "speaker": "电击枪竟然也是，攻击速度，需要攻击速度吗？当然要了。",
+            "url": "wss://www.modelscope.cn/api/v1/studio/xzjosh/Xuan-GPT-SoVITS/gradio/queue/join",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Xuan-GPT-SoVITS/gradio/file="
+        },
+        {
+            "name": "山泥若",
+            "speaker": "好帅的远射啊！哎下播明天再来兄弟们溜了。",
+            "url": "wss://www.modelscope.cn/api/v1/studio/xzjosh/Ruo-GPT-SoVITS/gradio/queue/join",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Ruo-GPT-SoVITS/gradio/file="
+        },
+        {
+            "name": "丁真",
+            "speaker": "有可能以后再也听不到这些声音了，他们是我们的朋友。",
+            "url": "wss://www.modelscope.cn/api/v1/studio/xzjosh/dingzhen-GPT-SoVITS/gradio/queue/join",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/dingzhen-GPT-SoVITS/gradio/file="
+        },
+        {
+            "name": "孙笑川",
+            "speaker": "叫做什么某某某组合这里我就不说什么组合了我怕我说出去有人断章取义，又说我在黑这个组合好吧。",
+            "url": "wss://www.modelscope.cn/api/v1/studio/xzjosh/sun-GPT-SoVITS/gradio/queue/join",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/sun-GPT-SoVITS/gradio/file="
+        },
+        {
+            "name": "东雪莲",
+            "speaker": "完了我找不到他之前的投稿了，反正就是有一个。",
+            "url": "wss://www.modelscope.cn/api/v1/studio/xzjosh/Azuma-GPT-SoVITS/gradio/queue/join",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Azuma-GPT-SoVITS/gradio/file="
+        },
+        {
+            "name": "塔菲",
+            "speaker": "雏草姬没了，雏草姬没了。",
+            "url": "wss://www.modelscope.cn/api/v1/studio/xzjosh/Taffy-GPT-SoVITS/gradio/queue/join",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Taffy-GPT-SoVITS/gradio/file="
+        },
+        {
+            "name": "奶绿",
+            "speaker": "谢谢，老公老公我爱你，咋还没缓过劲儿啊？",
+            "url": "wss://www.modelscope.cn/api/v1/studio/xzjosh/LAPLACE-GPT-SoVITS/gradio/queue/join",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/LAPLACE-GPT-SoVITS/gradio/file="
+        },
+        {
+            "name": "阿梓",
+            "speaker": "我放着但我没看，我放了一会儿但我没看我的心已经全被宝可梦，卡牌夺走了。",
+            "url": "wss://www.modelscope.cn/api/v1/studio/xzjosh/Azusa-GPT-SoVITS/gradio/queue/join",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Azusa-GPT-SoVITS/gradio/file="
+        },
+        {
+            "name": "七海",
+            "speaker": "不会没机会用这个，穿上的这个，区别了吧。",
+            "url": "wss://www.modelscope.cn/api/v1/studio/xzjosh/Nana7mi-GPT-SoVITS/gradio/queue/join",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Nana7mi-GPT-SoVITS/gradio/file="
+        },
+        {
+            "name": "星瞳",
+            "speaker": "心目中觉得最喜庆的音乐来，演奏给今天过生日的小星星啦对吧？",
+            "url": "wss://www.modelscope.cn/api/v1/studio/xzjosh/XingTong-GPT-SoVITS/gradio/queue/join",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/XingTong-GPT-SoVITS/gradio/file="
+        },
+        {
+            "name": "星瞳坏女人",
+            "speaker": "什么意思啊？什么意思啊她，她不播了是吧？",
+            "url": "wss://www.modelscope.cn/api/v1/studio/xzjosh/badXT-GPT-SoVITS/gradio/queue/join",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/badXT-GPT-SoVITS/gradio/file="
+        },
+        {
+            "name": "扇宝",
+            "speaker": "我觉得应该还是一个比较对的一个范围里，是一个是一个。",
+            "url": "wss://www.modelscope.cn/api/v1/studio/xzjosh/SB-GPT-SoVITS/gradio/queue/join",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/SB-GPT-SoVITS/gradio/file="
+        },
+        {
+            "name": "扇宝卖卖",
+            "speaker": "那我们，唠也唠了这么久了唠了有十几分钟了我们要不来唱唱，唱唱歌，想听什么，今天想听什么。",
+            "url": "wss://www.modelscope.cn/api/v1/studio/xzjosh/maimai-GPT-SoVITS/gradio/queue/join",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/maimai-GPT-SoVITS/gradio/file="
+        },
+        {
+            "name": "尼奈",
+            "speaker": "直播间的观众们点点关注好吗？农喵。",
+            "url": "wss://www.modelscope.cn/api/v1/studio/xzjosh/nine-GPT-SoVITS/gradio/queue/join",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/nine-GPT-SoVITS/gradio/file="
+        },
+        {
+            "name": "恬豆",
+            "speaker": "机场！发现机场太美丽啦！",
+            "url": "wss://www.modelscope.cn/api/v1/studio/xzjosh/Bekki-GPT-SoVITS/gradio/queue/join",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Bekki-GPT-SoVITS/gradio/file="
+        },
+        {
+            "name": "向晚",
+            "speaker": "你们有没有见过，呃…呃把我的这个福字给我拿走，我现在还没有。",
+            "url": "wss://www.modelscope.cn/api/v1/studio/xzjosh/Ava-GPT-SoVITS/gradio/queue/join",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Ava-GPT-SoVITS/gradio/file="
+        },
+        {
+            "name": "贝拉",
+            "speaker": "诶嘿嘿嘿，哈喽大家好这里是诶嗖的队长以及舞蹈担当贝拉大家可以叫我的英文名，贝诶",
+            "url": "wss://www.modelscope.cn/api/v1/studio/xzjosh/Bella-GPT-SoVITS/gradio/queue/join",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Bella-GPT-SoVITS/gradio/file="
+        },
+        {
+            "name": "珈乐",
+            "speaker": "他的师傅呢叫九剑仙，其他的就是，也是大家比较熟悉的一些角色啊你可能之前看的时候对那个全名不是，印象很深刻，但是。",
+            "url": "wss://www.modelscope.cn/api/v1/studio/xzjosh/Carol-GPT-SoVITS/gradio/queue/join",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Carol-GPT-SoVITS/gradio/file="
+        },
+        {
+            "name": "嘉然",
+            "speaker": "你们会不会用那种睡觉神器小然之前有看到一位，就经常分享日常小妙招的一位阿姨她有提到过。",
+            "url": "ss://www.modelscope.cn/api/v1/studio/xzjosh/Diana-GPT-SoVITS/gradio/queue/join",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Diana-GPT-SoVITS/gradio/file="
+        },
+        {
+            "name": "乃琳",
+            "speaker": "这是，我希望可以看到大家在，允许拍摄的地方。",
+            "url": "wss://www.modelscope.cn/api/v1/studio/xzjosh/Eileen-GPT-SoVITS/gradio/queue/join",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Eileen-GPT-SoVITS/gradio/file="
+        }
+    ]
+}

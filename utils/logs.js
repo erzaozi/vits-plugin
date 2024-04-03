@@ -15,7 +15,7 @@ try {
  */
 class Log {
   constructor () {
-    this.header = `[NEKO-STATUS-PLUGIN v${currentVersion}]`
+    this.header = `[VITS-PLUGIN v${currentVersion}]`
   }
 
   /** 快捷执行logger.info( )  */

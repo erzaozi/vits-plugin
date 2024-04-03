@@ -41,7 +41,7 @@ export class vits_sync extends plugin {
       await e.reply(segment.record(`base64://${base64}`));
       return false;
     } catch (err) {
-      console.log(err);
+      logger.error(err)
       return false;
     }
   }

@@ -1,6 +1,7 @@
+import { TextToSpeech as BertVITSTextToSpeech } from '../components/Bert-VITS2.js';
+import { TextToSpeech as GPTSoVITSTextToSpeech } from '../components/GPT-SoVITS.js';
 import plugin from '../../../lib/plugins/plugin.js'
 import Config from '../components/Config.js'
-import { TextToSpeech } from '../components/Bert-VITS2.js'
 import { getRecord } from '../components/Record.js'
 
 export class TTS extends plugin {
@@ -27,16 +28,23 @@ export class TTS extends plugin {
   async tts(e) {
     const [_, role, text] = e.msg.match(/^[/#]?合成(.*?)语音(.*?)$/) || [];
     if (!role || !text) return e.reply(`请输入要使用的${role ? '文本' : '角色'}`);
-  
+
     const { tts_config: c } = await Config.getConfig();
     if (c.send_reminder) e.reply('正在合成语音，请稍等...', true);
-  
-    const url = await TextToSpeech(role, text, c);
+
+    let url;
+
+    if (c.use_model_type == 'GPT-SoVITS') {
+      url = await GPTSoVITSTextToSpeech(role, text, c);
+    } else {
+      url = await BertVITSTextToSpeech(role, text, c);
+    }
+
     if (!url) return e.reply('合成失败，请检查角色名和文本内容');
-  
+
     const base64 = await getRecord(url);
     await e.reply(segment.record(`base64://${base64}`));
-  
+
     return true;
   }
 }
