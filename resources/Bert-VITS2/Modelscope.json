@@ -1,0 +1,256 @@
+{
+    "space": [
+        {
+            "name": "陈泽",
+            "speaker": "陈泽",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/Ze-Bert-VITS2-2.3/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Ze-Bert-VITS2-2.3/gradio/file="
+        },
+        {
+            "name": "星瞳坏女人",
+            "speaker": "坏女人星瞳",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/badXT-Bert-VITS2-2.3/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/badXT-Bert-VITS2-2.3/gradio/file="
+        },
+        {
+            "name": "梅西",
+            "speaker": "Messi",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/Messi-Bert-VITS2-2.3/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Messi-Bert-VITS2-2.3/gradio/file="
+        },
+        {
+            "name": "珈乐",
+            "speaker": "珈乐",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/Carol-Bert-VITS2-2.3/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Carol-Bert-VITS2-2.3/gradio/file="
+        },
+        {
+            "name": "乃琳",
+            "speaker": "乃琳",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/Queen-Bert-VITS2-2.3/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Queen-Bert-VITS2-2.3/gradio/file="
+        },
+        {
+            "name": "七海",
+            "speaker": "七海",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/Nana7mi-Bert-VITS2-2.3/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Nana7mi-Bert-VITS2-2.3/gradio/file="
+        },
+        {
+            "name": "塔菲",
+            "speaker": "永雏塔菲",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/Taffy-Bert-VITS2-2.3/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Taffy-Bert-VITS2-2.3/gradio/file="
+        },
+        {
+            "name": "东雪莲",
+            "speaker": "东雪莲",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/Azuma-Bert-VITS2-2.3/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Azuma-Bert-VITS2-2.3/gradio/file="
+        },
+        {
+            "name": "奶绿",
+            "speaker": "明前奶绿",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/LAPLACE-Bert-VITS2-2.3/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/LAPLACE-Bert-VITS2-2.3/gradio/file="
+        },
+        {
+            "name": "尼奈",
+            "speaker": "尼奈",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/nine-Bert-VITS2-2.3/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/nine-Bert-VITS2-2.3/gradio/file="
+        },
+        {
+            "name": "科比",
+            "speaker": "科比",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/Kobe-Bert-VITS2-2.3/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Kobe-Bert-VITS2-2.3/gradio/file="
+        },
+        {
+            "name": "嘉然",
+            "speaker": "嘉然",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/Diana-Bert-VITS2-2.3/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Diana-Bert-VITS2-2.3/gradio/file="
+        },
+        {
+            "name": "丁真",
+            "speaker": "丁真",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/DZ-Bert-VITS2-2.3/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/DZ-Bert-VITS2-2.3/gradio/file="
+        },
+        {
+            "name": "丁真2",
+            "speaker": "丁真",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/dingzhen-Bert-VITS2-2.3/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/dingzhen-Bert-VITS2-2.3/gradio/file="
+        },
+        {
+            "name": "丁真3",
+            "speaker": "丁真",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/DZhen-Bert-VITS2-2.3/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/DZhen-Bert-VITS2-2.3/gradio/file="
+        },
+        {
+            "name": "炫神",
+            "speaker": "炫神",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/Xuan-Bert-VITS2-2.3/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Xuan-Bert-VITS2-2.3/gradio/file="
+        },
+        {
+            "name": "电棍",
+            "speaker": "otto",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/otto-Bert-VITS2-2.3/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/otto-Bert-VITS2-2.3/gradio/file="
+        },
+        {
+            "name": "阿梓",
+            "speaker": "阿梓",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/Azusa-Bert-VITS2-2.3/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Azusa-Bert-VITS2-2.3/gradio/file="
+        },
+        {
+            "name": "东雪莲旧版",
+            "speaker": "东雪莲",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/Azuma-Bert-VITS2.0.2/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Azuma-Bert-VITS2.0.2/gradio/file="
+        },
+        {
+            "name": "塔菲旧版",
+            "speaker": "永雏塔菲",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/Taffy-Bert-VITS2.0.2/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Taffy-Bert-VITS2.0.2/gradio/file="
+        },
+        {
+            "name": "星瞳",
+            "speaker": "星瞳",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/2568-Bert-VITS2/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/2568-Bert-VITS2/gradio/file="
+        },
+        {
+            "name": "孙笑川",
+            "speaker": "孙笑川",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/SXC-Bert-VITS2/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/SXC-Bert-VITS2/gradio/file="
+        },
+        {
+            "name": "塔菲2",
+            "speaker": "taffy",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/Taffy-Bert-VITS2/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Taffy-Bert-VITS2/gradio/file="
+        },
+        {
+            "name": "小菲",
+            "speaker": "TF",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/LittleTaffy-Bert-VITS2/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/LittleTaffy-Bert-VITS2/gradio/file="
+        },
+        {
+            "name": "东雪莲2",
+            "speaker": "Azuma",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/Azuma-Bert-VITS2/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Azuma-Bert-VITS2/gradio/file="
+        },
+        {
+            "name": "奶绿2",
+            "speaker": "LAPLACE",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/LAPLACE-Bert-VITS2/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/LAPLACE-Bert-VITS2/gradio/file="
+        },
+        {
+            "name": "尼奈2",
+            "speaker": "nine",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/nine1-Bert-VITS2/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/nine1-Bert-VITS2/gradio/file="
+        },
+        {
+            "name": "珈乐2",
+            "speaker": "Carol",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/Carol-Bert-VITS2/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Carol-Bert-VITS2/gradio/file="
+        },
+        {
+            "name": "电棍2",
+            "speaker": "otto",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/otto-Bert-VITS2/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/otto-Bert-VITS2/gradio/file="
+        },
+        {
+            "name": "七海2",
+            "speaker": "Nana7mi",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/Nana7mi-Bert-VITS2/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Nana7mi-Bert-VITS2/gradio/file="
+        },
+        {
+            "name": "星瞳2",
+            "speaker": "XingTong",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/XingTong-Bert-VITS2/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/XingTong-Bert-VITS2/gradio/file="
+        },
+        {
+            "name": "向晚",
+            "speaker": "Ava",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/Ava-Bert-VITS2/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Ava-Bert-VITS2/gradio/file="
+        },
+        {
+            "name": "嘉然2",
+            "speaker": "Diana",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/Diana-Bert-VITS2/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Diana-Bert-VITS2/gradio/file="
+        },
+        {
+            "name": "剑魔",
+            "speaker": "Aatrox",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/Aatrox-Bert-VITS2/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Aatrox-Bert-VITS2/gradio/file="
+        },
+        {
+            "name": "乃琳2",
+            "speaker": "Eileen",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/Eileen-Bert-VITS2/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Eileen-Bert-VITS2/gradio/file="
+        },
+        {
+            "name": "贝拉",
+            "speaker": "Bella",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/Bella-Bert-VITS2/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Bella-Bert-VITS2/gradio/file="
+        },
+        {
+            "name": "扇宝",
+            "speaker": "ShanBao",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/ShanBao-Bert-VITS2/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/ShanBao-Bert-VITS2/gradio/file="
+        },
+        {
+            "name": "恬豆",
+            "speaker": "Bekki",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/Bekki-Bert-VITS2/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Bekki-Bert-VITS2/gradio/file="
+        },
+        {
+            "name": "黑桃影",
+            "speaker": "Echo",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/Echo-Bert-VITS2/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Echo-Bert-VITS2/gradio/file="
+        },
+        {
+            "name": "卖卖",
+            "speaker": "WaiMai",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/maimai-Bert-VITS2/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/maimai-Bert-VITS2/gradio/file="
+        },
+        {
+            "name": "鹿鸣",
+            "speaker": "Lumi",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/Lumi-Bert-VITS2/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Lumi-Bert-VITS2/gradio/file="
+        },
+        {
+            "name": "文静",
+            "speaker": "Wenjing",
+            "url": "https://www.modelscope.cn/api/v1/studio/xzjosh/Wenjing-Bert-VITS2/gradio/run/predict",
+            "file": "https://www.modelscope.cn/api/v1/studio/xzjosh/Wenjing-Bert-VITS2/gradio/file="
+        }
+    ]
+}

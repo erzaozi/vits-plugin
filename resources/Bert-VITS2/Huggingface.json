@@ -1,0 +1,238 @@
+{
+    "space": [
+        {
+            "name": "星瞳坏女人",
+            "speaker": "坏女人星瞳",
+            "url": "wss://xzjosh-badxt-bert-vits2-2-3.hf.space/queue/join",
+            "file": "https://xzjosh-badxt-bert-vits2-2-3.hf.space/--replicas/cvbg9/file="
+        },
+        {
+            "name": "梅西",
+            "speaker": "Messi",
+            "url": "wss://xzjosh-messi-bert-vits2-2-3.hf.space/queue/join",
+            "file": "https://xzjosh-messi-bert-vits2-2-3.hf.space/--replicas/m3tj3/file="
+        },
+        {
+            "name": "珈乐",
+            "speaker": "珈乐",
+            "url": "wss://xzjosh-carol-bert-vits2-2-3.hf.space/queue/join",
+            "file": "https://xzjosh-carol-bert-vits2-2-3.hf.space/--replicas/dcfs7/file="
+        },
+        {
+            "name": "乃琳",
+            "speaker": "乃琳",
+            "url": "wss://xzjosh-queen-bert-vits2-2-3.hf.space/queue/join",
+            "file": "https://xzjosh-queen-bert-vits2-2-3.hf.space/--replicas/hu125/file="
+        },
+        {
+            "name": "七海",
+            "speaker": "七海",
+            "url": "wss://xzjosh-nana7mi-bert-vits2-2-3.hf.space/queue/join",
+            "file": "https://xzjosh-nana7mi-bert-vits2-2-3.hf.space/--replicas/z450k/file="
+        },
+        {
+            "name": "塔菲",
+            "speaker": "永雏塔菲",
+            "url": "wss://xzjosh-taffy-bert-vits2-2-3.hf.space/queue/join",
+            "file": "https://xzjosh-taffy-bert-vits2-2-3.hf.space/--replicas/03kkl/file="
+        },
+        {
+            "name": "东雪莲",
+            "speaker": "东雪莲",
+            "url": "wss://xzjosh-azuma-bert-vits2-2-3.hf.space/queue/join",
+            "file": "https://xzjosh-azuma-bert-vits2-2-3.hf.space/--replicas/yqad3/file="
+        },
+        {
+            "name": "奶绿",
+            "speaker": "明前奶绿",
+            "url": "wss://xzjosh-laplace-bert-vits2-2-3.hf.space/queue/join",
+            "file": "https://xzjosh-laplace-bert-vits2-2-3.hf.space/--replicas/u1wf3/file="
+        },
+        {
+            "name": "尼奈",
+            "speaker": "尼奈",
+            "url": "wss://xzjosh-nine-bert-vits2-2-3.hf.space/queue/join",
+            "file": "https://xzjosh-nine-bert-vits2-2-3.hf.space/--replicas/8ptwp/file="
+        },
+        {
+            "name": "科比",
+            "speaker": "科比",
+            "url": "wss://xzjosh-kobe-bert-vits2-2-3.hf.space/queue/join",
+            "file": "https://xzjosh-kobe-bert-vits2-2-3.hf.space/--replicas/9fhp9/file="
+        },
+        {
+            "name": "嘉然",
+            "speaker": "嘉然",
+            "url": "wss://xzjosh-diana-bert-vits2-2-3.hf.space/queue/join",
+            "file": "https://xzjosh-diana-bert-vits2-2-3.hf.space/--replicas/i7suh/file="
+        },
+        {
+            "name": "丁真",
+            "speaker": "丁真",
+            "url": "wss://xzjosh-dz-bert-vits2-2-3.hf.space/queue/join",
+            "file": "https://xzjosh-dz-bert-vits2-2-3.hf.space/--replicas/9f0i3/file="
+        },
+        {
+            "name": "炫神",
+            "speaker": "炫神",
+            "url": "wss://xzjosh-xuan-bert-vits2-2-3.hf.space/queue/join",
+            "file": "https://xzjosh-xuan-bert-vits2-2-3.hf.space/--replicas/s5n2c/file="
+        },
+        {
+            "name": "电棍",
+            "speaker": "otto",
+            "url": "wss://xzjosh-otto-bert-vits2-2-3.hf.space/queue/join",
+            "file": "https://xzjosh-otto-bert-vits2-2-3.hf.space/--replicas/68bo4/file="
+        },
+        {
+            "name": "阿梓",
+            "speaker": "阿梓",
+            "url": "wss://xzjosh-azusa-bert-vits2-2-3.hf.space/queue/join",
+            "file": "https://xzjosh-azusa-bert-vits2-2-3.hf.space/--replicas/vv4xv/file="
+        },
+        {
+            "name": "东雪莲旧版",
+            "speaker": "东雪莲",
+            "url": "https://xzjosh-azuma-bert-vits2-0-2.hf.space/queue/join",
+            "file": "https://xzjosh-azuma-bert-vits2-0-2.hf.space/--replicas/kqixc/file="
+        },
+        {
+            "name": "塔菲旧版",
+            "speaker": "永雏塔菲",
+            "url": "https://xzjosh-taffy-bert-vits2-0-2.hf.space/queue/join",
+            "file": "https://xzjosh-taffy-bert-vits2-0-2.hf.space/--replicas/4i9tr/file="
+        },
+        {
+            "name": "星瞳",
+            "speaker": "星瞳",
+            "url": "https://xzjosh-2568-bert-vits2.hf.space/queue/join",
+            "file": "https://xzjosh-2568-bert-vits2.hf.space/--replicas/kmoqe/file="
+        },
+        {
+            "name": "孙笑川",
+            "speaker": "孙笑川",
+            "url": "wss://xzjosh-sun-bert-vits2.hf.space/queue/join",
+            "file": "https://xzjosh-sun-bert-vits2.hf.space/--replicas/iemrt/file="
+        },
+        {
+            "name": "塔菲2",
+            "speaker": "taffy",
+            "url": "wss://xzjosh-taffy-bert-vits2.hf.space/queue/join",
+            "file": "https://xzjosh-taffy-bert-vits2.hf.space/file="
+        },
+        {
+            "name": "小菲",
+            "speaker": "TF",
+            "url": "wss://xzjosh-littletaffy-bert-vits2.hf.space/queue/join",
+            "file": "https://xzjosh-littletaffy-bert-vits2.hf.space/--replicas/3y0gs/file="
+        },
+        {
+            "name": "东雪莲2",
+            "speaker": "Azuma",
+            "url": "wss://xzjosh-azuma-bert-vits2.hf.space/queue/join",
+            "file": "https://xzjosh-azuma-bert-vits2.hf.space/--replicas/nsywq/file="
+        },
+        {
+            "name": "奶绿2",
+            "speaker": "LAPLACE",
+            "url": "https://xzjosh-laplace-bert-vits2.hf.space/--replicas/do1xz/queue/join",
+            "file": "https://xzjosh-laplace-bert-vits2.hf.space/--replicas/do1xz/file="
+        },
+        {
+            "name": "尼奈2",
+            "speaker": "nine",
+            "url": "wss://xzjosh-nine1-bert-vits2.hf.space/queue/join",
+            "file": "https://xzjosh-nine1-bert-vits2.hf.space/--replicas/9yrfb/file="
+        },
+        {
+            "name": "珈乐2",
+            "speaker": "Carol",
+            "url": "wss://xzjosh-carol-bert-vits2.hf.space/queue/join",
+            "file": "https://xzjosh-carol-bert-vits2.hf.space/--replicas/7718x/file="
+        },
+        {
+            "name": "电棍2",
+            "speaker": "otto",
+            "url": "wss://xzjosh-otto-bert-vits2.hf.space/queue/join",
+            "file": "https://xzjosh-otto-bert-vits2.hf.space/--replicas/yz3pk/file="
+        },
+        {
+            "name": "七海2",
+            "speaker": "Nana7mi",
+            "url": "wss://xzjosh-nana7mi-bert-vits2.hf.space/queue/join",
+            "file": "https://xzjosh-nana7mi-bert-vits2.hf.space/--replicas/2p4k6/file="
+        },
+        {
+            "name": "星瞳2",
+            "speaker": "XingTong",
+            "url": "wss://xzjosh-xingtong-bert-vits2.hf.space/queue/join",
+            "file": "https://xzjosh-xingtong-bert-vits2.hf.space/--replicas/4iodu/file="
+        },
+        {
+            "name": "向晚",
+            "speaker": "Ava",
+            "url": "wss://xzjosh-ava-bert-vits2.hf.space/queue/join",
+            "file": "https://xzjosh-ava-bert-vits2.hf.space/--replicas/690xv/file="
+        },
+        {
+            "name": "嘉然2",
+            "speaker": "Diana",
+            "url": "wss://xzjosh-diana-bert-vits2.hf.space/queue/join",
+            "file": "https://xzjosh-diana-bert-vits2.hf.space/--replicas/8r4vv/file="
+        },
+        {
+            "name": "剑魔",
+            "speaker": "Aatrox",
+            "url": "wss://xzjosh-aatrox-bert-vits2.hf.space/queue/join",
+            "file": "https://xzjosh-aatrox-bert-vits2.hf.space/--replicas/8x4pl/file="
+        },
+        {
+            "name": "乃琳2",
+            "speaker": "Eileen",
+            "url": "wss://xzjosh-eileen-bert-vits2.hf.space/queue/join",
+            "file": "https://xzjosh-eileen-bert-vits2.hf.space/--replicas/jf6j7/file="
+        },
+        {
+            "name": "贝拉",
+            "speaker": "Bella",
+            "url": "wss://xzjosh-bella-bert-vits2.hf.space/queue/join",
+            "file": "https://xzjosh-bella-bert-vits2.hf.space/--replicas/s2ovi/file="
+        },
+        {
+            "name": "扇宝",
+            "speaker": "ShanBao",
+            "url": "wss://xzjosh-shanbao-bert-vits2.hf.space/queue/join",
+            "file": "https://xzjosh-shanbao-bert-vits2.hf.space/--replicas/hpiuo/file="
+        },
+        {
+            "name": "恬豆",
+            "speaker": "Bekki",
+            "url": "wss://xzjosh-bekki-bert-vits2.hf.space/queue/join",
+            "file": "https://xzjosh-bekki-bert-vits2.hf.space/--replicas/ouyge/file="
+        },
+        {
+            "name": "黑桃影",
+            "speaker": "Echo",
+            "url": "wss://xzjosh-echo-bert-vits2.hf.space/queue/join",
+            "file": "https://xzjosh-echo-bert-vits2.hf.space/--replicas/8gjvt/file="
+        },
+        {
+            "name": "卖卖",
+            "speaker": "WaiMai",
+            "url": "wss://xzjosh-maimai-bert-vits2.hf.space/queue/join",
+            "file": "https://xzjosh-maimai-bert-vits2.hf.space/--replicas/3fnti/file="
+        },
+        {
+            "name": "鹿鸣",
+            "speaker": "Lumi",
+            "url": "wss://xzjosh-lumi-bert-vits2.hf.space/queue/join",
+            "file": "https://xzjosh-lumi-bert-vits2.hf.space/--replicas/d9t7i/file="
+        },
+        {
+            "name": "文静",
+            "speaker": "Wenjing",
+            "url": "wss://xzjosh-wenjing-bert-vits2.hf.space/queue/join",
+            "file": "https://xzjosh-wenjing-bert-vits2.hf.space/--replicas/4t008/file="
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+tts_config:
+  use_model_type: Bert-VITS2
+  use_interface_sources: Modelscope
+  send_reminder: true
+tts_sync_config:
+  - user_id: 3146312184
+    enable_group: []
+    use_model_type: Bert-VITS2
+    use_interface_sources: Modelscope
+    use_speeaker: 塔菲
