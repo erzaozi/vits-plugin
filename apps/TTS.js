@@ -1,4 +1,5 @@
 import plugin from '../../../lib/plugins/plugin.js'
+import Config from '../components/Config.js'
 import { TextToSpeech } from '../components/Bert-VITS2.js'
 
 export class TTS extends plugin {
