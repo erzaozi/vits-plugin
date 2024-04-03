@@ -43,7 +43,7 @@ export class TTS extends plugin {
       url = await BertVITSTextToSpeech(role, text, c);
     }
 
-    if (!url) return e.reply('合成失败，请检查角色名和文本内容，或检查控制台报错\n  Tips：更换模型类型后请重新设置源');
+    if (!url) return e.reply('合成失败，请检查角色名和文本内容，或检查控制台报错\n  Tips：更换模型类型后请重新设置源，每个源支持的角色不同，相关列表请查看本插件README.md文档');
 
     const base64 = await getRecord(url);
     await e.reply(segment.record(`base64://${base64}`));
