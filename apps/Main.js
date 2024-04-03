@@ -1,5 +1,6 @@
 import plugin from '../../../lib/plugins/plugin.js'
 import Config from '../components/Config.js'
+import { TextToSpeech } from '../components/Bert-VITS2.js'
 
 export class neko_status extends plugin {
   constructor() {
@@ -23,6 +24,18 @@ export class neko_status extends plugin {
   }
 
   async sync(e) {
+    try {
+      if (!e.group_id) return false
+      let config = await Config.getConfig().tts_sync_config;
+      let c = config.find(item => item.user_id === e.user_id);
+      if (!c) return false
+      let a = c.use_speeaker
+      let url = await TextToSpeech(i, a, c);
+      if (!url) return false
+      await e.reply(segment.record(url))
+    } catch (err) {
+      console.log(err)
+    }
     return false
   }
 }

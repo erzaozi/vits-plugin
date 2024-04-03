@@ -6,16 +6,7 @@ import ws from 'ws';
 
 const other_params = [0.6, 0.5, 0.9, 1, "ZH", null, "Happy", "Text prompt", "", 0.7];
 
-let globalConfig;
-async function loadConfig() {
-    if (!globalConfig) {
-        globalConfig = await Config.getConfig().tts_config;
-    }
-    return globalConfig;
-}
-
-export async function TextToSpeech(speaker, text) {
-    const config = await loadConfig();
+export async function TextToSpeech(speaker, text, config) {
     const pluginPath = `${pluginResources}/${config.use_model_type}/${config.use_interface_sources}.json`;
     const jsonData = fs.readFileSync(pluginPath);
     const data = JSON.parse(jsonData);

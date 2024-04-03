@@ -27,7 +27,8 @@ export class TTS extends plugin {
     const [Z, i, a] = params;
     if (!i) return e.reply('请输入要使用的角色')
     if (!a) return e.reply('请输入要合成的文本')
-    let url = await TextToSpeech(i, a);
+    let c = await Config.getConfig().tts_config;
+    let url = await TextToSpeech(i, a, c);
     if (!url) return e.reply('合成失败，请检查角色名和文本内容')
     await e.reply(segment.record(url))
     return true
