@@ -22,9 +22,11 @@ pnpm install --filter=vits-plugin
 
 ## 😻 模型列表
 
-### Bert-VITS2
+### 🍉Bert-VITS2
 
 #### Modelscope 平台
+
+<details><summary>点击展开</summary>
 
 | 模型名称 | 模型名称 | 模型名称 | 模型名称 |
 | :---: | :---: | :---: | :---: |
@@ -40,7 +42,11 @@ pnpm install --filter=vits-plugin
 | [AI贝拉](https://www.modelscope.cn/studios/xzjosh/Bella-Bert-VITS2) | [AI扇宝](https://www.modelscope.cn/studios/xzjosh/ShanBao-Bert-VITS2) | [AI恬豆](https://www.modelscope.cn/studios/xzjosh/Bekki-Bert-VITS2) | [AI黑桃影](https://www.modelscope.cn/studios/xzjosh/Echo-Bert-VITS2) |
 | [AI卖卖](https://www.modelscope.cn/studios/xzjosh/maimai-Bert-VITS2) | [AI鹿鸣](https://www.modelscope.cn/studios/xzjosh/Lumi-Bert-VITS2) | [AI文静](https://www.modelscope.cn/studios/xzjosh/Wenjing-Bert-VITS2) |  |
 
+</details>
+
 #### Huggingface 平台
+
+<details><summary>点击展开</summary>
 
 | 模型名称 | 模型名称 | 模型名称 | 模型名称 |
 | :---: | :---: | :---: | :---: |
@@ -55,9 +61,13 @@ pnpm install --filter=vits-plugin
 | [AI乃琳](https://huggingface.co/spaces/XzJosh/Eileen-Bert-VITS2) | [AI贝拉](https://huggingface.co/spaces/XzJosh/Bella-Bert-VITS2) | [AI扇宝](https://huggingface.co/spaces/XzJosh/ShanBao-Bert-VITS2) | [AI恬豆](https://huggingface.co/spaces/XzJosh/Bekki-Bert-VITS2) |
 | [AI黑桃影](https://huggingface.co/spaces/XzJosh/Echo-Bert-VITS2) | [AI卖卖](https://huggingface.co/spaces/XzJosh/maimai-Bert-VITS2) | [AI鹿鸣](https://huggingface.co/spaces/XzJosh/Lumi-Bert-VITS2) | [AI文静](https://huggingface.co/spaces/XzJosh/Wenjing-Bert-VITS2) |
 
-### GPT-SoVITS
+</details>
+
+### 🍊GPT-SoVITS
 
 #### Modelscope 平台
+
+<details><summary>点击展开</summary>
 
 | 模型名称 | 模型名称 | 模型名称 | 模型名称 |
 | :---: | :---: | :---: | :---: |
@@ -69,7 +79,11 @@ pnpm install --filter=vits-plugin
 | [AI向晚](https://www.modelscope.cn/studios/xzjosh/Ava-GPT-SoVITS) | [AI贝拉](https://www.modelscope.cn/studios/xzjosh/Bella-GPT-SoVITS) | [AI珈乐](https://www.modelscope.cn/studios/xzjosh/Carol-GPT-SoVITS) | [AI嘉然](https://www.modelscope.cn/studios/xzjosh/Diana-GPT-SoVITS) |
 | [AI乃琳](https://www.modelscope.cn/studios/xzjosh/Eileen-GPT-SoVITS) |  |  |  |
 
+</details>
+
 #### Huggingface 平台
+
+<details><summary>点击展开</summary>
 
 | 模型名称 | 模型名称 | 模型名称 | 模型名称 |
 | :---: | :---: | :---: | :---: |
@@ -79,6 +93,8 @@ pnpm install --filter=vits-plugin
 | [AI扇宝](https://huggingface.co/spaces/XzJosh/SB-GPT-SoVITS) | [AI扇宝（卖卖）](https://huggingface.co/spaces/XzJosh/maimai-GPT-SoVITS) | [AI尼奈](https://huggingface.co/spaces/XzJosh/nine-GPT-SoVITS) | [AI恬豆](https://huggingface.co/spaces/XzJosh/Bekki-GPT-SoVITS) |
 | [AI向晚](https://huggingface.co/spaces/XzJosh/Ava-GPT-SoVITS) | [AI贝拉](https://huggingface.co/spaces/XzJosh/Bella-GPT-SoVITS) | [AI珈乐](https://huggingface.co/spaces/XzJosh/Carol-GPT-SoVITS) | [AI嘉然](https://huggingface.co/spaces/XzJosh/Diana-GPT-SoVITS) |
 | [AI乃琳](https://huggingface.co/spaces/XzJosh/Eileen-GPT-SoVITS) |  |  |  |
+
+</details>
 
 **如果使用插件过程中出现问题可以加群 `551081559` 反馈问题**
 
