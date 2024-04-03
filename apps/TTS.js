@@ -31,7 +31,7 @@ export class TTS extends plugin {
     if (!role || !text) return e.reply(`请输入要使用的${role ? '文本' : '角色'}`);
 
     const { tts_config: c } = await Config.getConfig();
-    if (c.send_reminder) e.reply('正在合成语音，请稍等...', true);
+    if (c.send_reminder) await e.reply('正在合成语音，请稍等...', true);
 
     let url;
 
