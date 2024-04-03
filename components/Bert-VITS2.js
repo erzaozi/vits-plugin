@@ -27,7 +27,7 @@ async function getVoice(space, text, source) {
     let file_url;
     if (source == 'Modelscope') {
         file_url = await getModelscopeVoice(space, text);
-    } else if (source == 'HuggingFace') {
+    } else if (source == 'Huggingface') {
         file_url = await getHuggingfaceVoice(space, text);
     }
     return file_url ? `${space.file}${file_url}` : null;
