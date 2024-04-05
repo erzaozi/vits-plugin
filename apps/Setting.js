@@ -181,12 +181,12 @@ export class setting extends plugin {
     }
     const config = await Config.getConfig();
     const message = e.msg.replace(/^[/#]?vits/, '').trim();
-    const userConfig = config.tts_sync_config.find(item => item.user_id === e.user_id);
+    const userConfig = config.tts_sync_config.find(item => item.user_id == e.user_id);
 
     if (message === '开启同传') {
       if (userConfig) {
-        if (!userConfig.enable_group.includes(e.group_id)) {
-          userConfig.enable_group.push(e.group_id);
+        if (!userConfig.enable_group.includes(String(e.group_id))) {
+          userConfig.enable_group.push(String(e.group_id));
           await Config.setConfig(config);
           e.reply(`当前群聊同传已开启，使用发音人：${userConfig.use_speaker}`);
         } else {
@@ -194,8 +194,8 @@ export class setting extends plugin {
         }
       } else {
         const newUserConfig = {
-          user_id: e.user_id,
-          enable_group: [e.group_id],
+          user_id: String(e.user_id),
+          enable_group: [String(e.group_id)],
           use_model_type: 'Bert-VITS2',
           use_interface_sources: 'Modelscope',
           use_speaker: '塔菲',
@@ -205,8 +205,8 @@ export class setting extends plugin {
         e.reply('当前群聊同传已开启，使用发音人：塔菲');
       }
     } else if (message === '关闭同传') {
-      if (userConfig && userConfig.enable_group.includes(e.group_id)) {
-        const index = userConfig.enable_group.indexOf(e.group_id);
+      if (userConfig && userConfig.enable_group.includes(String(e.group_id))) {
+        const index = userConfig.enable_group.indexOf(String(e.group_id));
         userConfig.enable_group.splice(index, 1);
         await Config.setConfig(config);
       }
@@ -223,7 +223,7 @@ export class setting extends plugin {
     const modelType = e.msg.replace(/^[/#]?vits设置同传模型/, '').trim();
 
     if (modelTypes.includes(modelType)) {
-      config.tts_sync_config.find(user => user.user_id === e.user_id).use_model_type = modelType;
+      config.tts_sync_config.find(user => user.user_id == e.user_id).use_model_type = modelType;
       await Config.setConfig(config);
       e.reply(`同传模型类型设置成功，当前模型类型为：${modelType}`);
     } else {
@@ -235,7 +235,7 @@ export class setting extends plugin {
 
   async setSyncSource(e) {
     const config = await Config.getConfig();
-    const userSyncConfig = config.tts_sync_config.find(item => item.user_id === e.user_id);
+    const userSyncConfig = config.tts_sync_config.find(item => item.user_id == e.user_id);
     const sources = fs.readdirSync(path.join(pluginResources, config.tts_config.use_model_type))
       .filter(file => file.endsWith('.json'))
       .map(file => file.replace('.json', ''));
@@ -254,7 +254,7 @@ export class setting extends plugin {
 
   async setSyncSpeaker(e) {
     const config = await Config.getConfig();
-    const userSyncConfig = config.tts_sync_config.find(item => item.user_id === e.user_id);
+    const userSyncConfig = config.tts_sync_config.find(item => item.user_id == e.user_id);
     const speakersDataPath = path.join(pluginResources, userSyncConfig.use_model_type, userSyncConfig.use_interface_sources + '.json');
     const speakersData = JSON.parse(fs.readFileSync(speakersDataPath));
     const speakerName = e.msg.replace(/^[/#]?vits设置同传发音人/, '').trim();
@@ -277,7 +277,7 @@ export class setting extends plugin {
 
   async getSpeaker(e) {
     const config = await Config.getConfig();
-    const userSyncConfig = config.tts_sync_config.find(item => item.user_id === e.user_id);
+    const userSyncConfig = config.tts_sync_config.find(item => item.user_id == e.user_id);
 
     if (!userSyncConfig) {
       e.reply('请先发送【#vits开启同传】开启同传功能');

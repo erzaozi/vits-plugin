@@ -31,10 +31,10 @@ export class vits_sync extends plugin {
       if (!e.group_id || !e.user_id) return false;
   
       const { tts_sync_config: config } = await Config.getConfig();
-      const c = config.find(item => item.user_id === e.user_id);
+      const c = config.find(item => item.user_id == e.user_id);
       if (!c || !c.use_speaker) return false;
 
-      if (!c.enable_group.includes(e.group_id)) return false;
+      if (!c.enable_group.includes(String(e.group_id))) return false;
 
       let url;
 
