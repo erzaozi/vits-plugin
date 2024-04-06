@@ -26,6 +26,21 @@ pnpm install --filter=vits-plugin
 
 ## 😻 模型列表
 
+模型与源的关系
+
+```
+resources
+├───Bert-VITS2
+│   ├───Modelscope.json
+│   └───Huggingface.json
+├───GPT-SoVITS
+│   ├───Modelscope.json
+│   └───Huggingface.json
+└───Genshin-TTS
+    └───Modelscope.json
+```
+要使用对应模型才能使用对应源中的发音人，举个例子，使用 `Bert-VITS2` 模型时能选择 `Modelscope` 和 `Huggingface` 两个源；而使用 `Genshin-TTS` 只能选择 `Modelscope` 一个源，即便源的名字相同，但不同模型的源是完全不一样的，里面的发音人也不一样，请参考下表找到你想要的发音人位置
+
 ### 🍉Bert-VITS2
 
 #### Modelscope 平台
