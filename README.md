@@ -1,30 +1,58 @@
-<div align="center">
+![vits-plugin](https://socialify.git.ci/erzaozi/vits-plugin/image?description=1&font=Raleway&forks=1&issues=1&language=1&name=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Auto)
 
-![nakiri_ayame, horns, virtual_youtuber, red_eyes, long_hair ,white background,fal s-1857591336](https://github.com/erzaozi/vits-plugin/assets/61369914/8b2e826a-7aa3-45a8-b58a-93f8e66d7d14)
+<img decoding="async" align=right src="resources/readme/girl.png" width="35%">
 
-# VITS-PLUGIN
+# VITS-PLUGIN 🍇
 
-</div>
+- 一个适用于 [Yunzai 系列机器人框架](https://github.com/yhArcadia/Yunzai-Bot-plugins-index) 的的 AI 语音合成插件，让你能够在机器人中使用 AI 语音合成功能
 
-## 😺 介绍
+- 使用著名AI社区 [huggingface](https://huggingface.co/) 和国内知名AI社区 [modelscope](https://www.modelscope.cn/) 的接口，支持BERT-VITS2、GPT-SoVITS、Genshin-TTS等模型，对自身硬件没有要求，降低了使用门槛，让更多人体验AI语音合成的乐趣。
 
-Yunzai-Bot 的在线VITS插件，收集网络上各种各样的在线语音合成接口，目前已收集接口数量：`381`，接口不断更新中
+- **使用中遇到问题请加QQ群咨询：[707331865](https://qm.qq.com/q/TXTIS9KhO2)**
 
-如果你有稳定好用的接口，欢迎联系我添加（能提交 PR 更好）
+> [!TIP]
+> 在朋友们的呼声下 [CikeyQi](https://github.com/CikeyQi) 决定开发这个插件，为了降低使用门槛，该插件搜罗当前互联网中可以直接免费使用的接口，并将其打包进插件中，让用户能够直接在机器人中使用这些接口，这个插件超棒的噢。
 
-## 😼 安装
+## 安装插件
 
-- 克隆本仓库至 plugins 目录
+#### 1. 克隆仓库
+
 ```
 git clone https://github.com/erzaozi/vits-plugin.git ./plugins/vits-plugin
 ```
 
-- 安装依赖
+> [!NOTE]
+> 如果你的网络环境较差，无法连接到Github，可以使用 [GitHub Proxy](https://mirror.ghproxy.com/) 提供的文件代理加速下载服务
+> ```
+> git clone https://mirror.ghproxy.com/https://github.com/erzaozi/vits-plugin.git ./plugins/vits-plugin
+> ```
+
+#### 2. 安装依赖
+
 ```
 pnpm install --filter=vits-plugin
 ```
 
-## 😻 模型列表
+## 插件配置
+
+> [!WARNING]
+> 非常不建议手动修改配置文件，本插件已兼容 [Guoba-plugin](https://github.com/guoba-yunzai/guoba-plugin) ，请使用锅巴插件对配置项进行修改
+
+- <details> <summary>获取 Genshin TTS Token</summary>
+    
+    在 [这里](https://tts.ai-hobbyist.org/#/apikey) 获取你的专属密钥
+
+  </details>
+
+## 功能列表
+
+请使用 `#vits帮助` 获取完整帮助
+
+- [x] 同声传译 自动将你的文本消息合成AI语音
+- [x] 语音合成 单独合成某个角色的语音
+- [x] 指令换源 可使用指令或锅巴更换模型源
+
+## 模型列表
 
 模型与源的关系
 
@@ -121,8 +149,6 @@ resources
 
 <details><summary>点击展开</summary>
 
-**默认密钥限制50字，要更多请前往 [这里](https://tts.ai-hobbyist.org/#/apikey) 获取密钥后，使用 `#vits设置原神密钥xxxxx` 填写密钥**
-
 | 模型名称 | 模型名称 | 模型名称 | 模型名称 |
 | :---: | :---: | :---: | :---: |
 | anzai         | 「信使」     | 「公子」     | 「博士」      |
@@ -191,32 +217,21 @@ resources
 
 </details>
 
-**如果使用插件过程中出现问题可以加群 `551081559` 反馈问题**
+## 常见问题
+1. 合成失败，请检查角色名与文本内容
+   + 检查当前使用的源和模型是否存在这个角色，角色名是否正确
 
-## 🙀 配置
+## 支持与贡献
 
-非常不建议手动修改配置文件，本插件已兼容 [Guoba-plugin](https://github.com/guoba-yunzai/guoba-plugin) ，请使用锅巴插件对配置项进行修改
+如果你喜欢这个项目，请不妨点个 Star🌟，这是对开发者最大的动力， 当然，你可以对我 [爱发电](https://afdian.net/a/sumoqi) 赞助，呜咪~❤️
 
-| 配置项 | 默认值 | 说明 |
-| :---: | :---: | :---: |
-| tts_config | Object | 文本转语音设置 |
-| tts_sync_config | Object | 群内同传设置 |
-| use_model_type | `Bert-VITS2` | 使用的模型类型 |
-| use_interface_sources | `Modelscope` | 使用的在线接口源 |
-| send_reminder | `true` | 提示任务已经开始 |
-| user_id | String | 开启同传的账号 |
-| enable_group | Array | 开启同传的群聊 |
-| use_speaker | `塔菲` | 同传时使用的角色名称 |
-| genshin_tts_token | `db6704a35055631bc6ba29c26d995f62` | 原神语音合成密钥 |
+有意见或者建议也欢迎提交 [Issues](https://github.com/erzaozi/vits-plugin/issues) 和 [Pull requests](https://github.com/erzaozi/vits-plugin/pulls)。
 
-## 😸 使用
+## 鸣谢
+* [Xz乔希](https://space.bilibili.com/5859321)：在线语音合成模型作者\
+* [Bert-VITS2](https://github.com/fishaudio/Bert-VITS2)：一个非常好的语音合成项目\
+* [GPT-SoVITS](https://github.com/RVC-Boss/GPT-SoVITS)：一个非常好的语音合成项目\
+* [Genshin-TTS](https://www.modelscope.cn/studios/erythrocyte/Bert-VITS2_Genshin_TTS)：一个非常好的语音合成项目
 
-- 发送 `#合成(角色名)语音(内容)` 即可开始合成对应角色的语音
-- 发送 `#vits开启同传` 即可开启同传功能
-
-## 😽 鸣谢
-
-[Xz乔希](https://space.bilibili.com/5859321)：在线语音合成模型作者\
-[Bert-VITS2](https://github.com/fishaudio/Bert-VITS2)：一个非常好的语音合成项目\
-[GPT-SoVITS](https://github.com/RVC-Boss/GPT-SoVITS)：一个非常好的语音合成项目\
-[Genshin-TTS](https://www.modelscope.cn/studios/erythrocyte/Bert-VITS2_Genshin_TTS)：一个非常好的语音合成项目
+## 许可证
+本项目使用 [GNU AGPLv3](https://choosealicense.com/licenses/agpl-3.0/) 作为开源许可证。
