@@ -6,7 +6,7 @@
 
 - 一个适用于 [Yunzai 系列机器人框架](https://github.com/yhArcadia/Yunzai-Bot-plugins-index) 的的 AI 语音合成插件，让你能够在机器人中使用 AI 语音合成功能
 
-- 使用著名AI社区 [huggingface](https://huggingface.co/) 和国内知名AI社区 [modelscope](https://www.modelscope.cn/) 的接口，支持BERT-VITS2、GPT-SoVITS、Genshin-TTS等模型，对自身硬件没有要求，降低了使用门槛，让更多人体验AI语音合成的乐趣。
+- 使用著名AI社区 [Huggingface](https://huggingface.co/) 和国内知名AI社区 [Modelscope](https://www.modelscope.cn/) 的接口，支持BERT-VITS2、GPT-SoVITS、Genshin-TTS等模型，对自身硬件没有要求，降低了使用门槛，让更多人体验AI语音合成的乐趣。
 
 - **使用中遇到问题请加QQ群咨询：[707331865](https://qm.qq.com/q/TXTIS9KhO2)**
 
@@ -38,19 +38,18 @@ pnpm install --filter=vits-plugin
 > [!WARNING]
 > 非常不建议手动修改配置文件，本插件已兼容 [Guoba-plugin](https://github.com/guoba-yunzai/guoba-plugin) ，请使用锅巴插件对配置项进行修改
 
-- <details> <summary>获取 Genshin TTS Token</summary>
+<details> <summary>获取 Genshin TTS Token</summary>
     
-    在 [这里](https://tts.ai-hobbyist.org/#/apikey) 获取你的专属密钥
+在 [这里](https://tts.ai-hobbyist.org/#/apikey) 获取你的专属密钥
 
-  </details>
+</details>
 
 ## 功能列表
 
 请使用 `#vits帮助` 获取完整帮助
 
-- [x] 同声传译 自动将你的文本消息合成AI语音
-- [x] 语音合成 单独合成某个角色的语音
-- [x] 指令换源 可使用指令或锅巴更换模型源
+- [x] 单独合成某个角色的语音
+- [x] 自动将你的文本消息合成AI语音
 
 ## 模型列表
 
@@ -227,11 +226,10 @@ resources
 
 有意见或者建议也欢迎提交 [Issues](https://github.com/erzaozi/vits-plugin/issues) 和 [Pull requests](https://github.com/erzaozi/vits-plugin/pulls)。
 
-## 鸣谢
-* [Xz乔希](https://space.bilibili.com/5859321)：在线语音合成模型作者\
-* [Bert-VITS2](https://github.com/fishaudio/Bert-VITS2)：一个非常好的语音合成项目\
-* [GPT-SoVITS](https://github.com/RVC-Boss/GPT-SoVITS)：一个非常好的语音合成项目\
-* [Genshin-TTS](https://www.modelscope.cn/studios/erythrocyte/Bert-VITS2_Genshin_TTS)：一个非常好的语音合成项目
+## 相关项目
+* [Bert-VITS2](https://github.com/fishaudio/Bert-VITS2)：vits2 backbone with multilingual-bert
+* [GPT-SoVITS](https://github.com/RVC-Boss/GPT-SoVITS)：1 min voice data can also be used to train a good TTS model! (few shot voice cloning)
+* [Genshin-TTS](https://www.modelscope.cn/studios/erythrocyte/Bert-VITS2_Genshin_TTS)：原神 & 星穹铁道在线语音合成
 
 ## 许可证
 本项目使用 [GNU AGPLv3](https://choosealicense.com/licenses/agpl-3.0/) 作为开源许可证。
