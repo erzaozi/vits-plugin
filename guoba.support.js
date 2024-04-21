@@ -140,23 +140,6 @@ export function supportGuoba() {
             ],
           },
         },
-        {
-          component: "Divider",
-          label: "其他 相关配置",
-          componentProps: {
-            orientation: "left",
-            plain: true,
-          },
-        },
-        {
-          field: "genshin_tts_token",
-          label: "原神语音合成密钥",
-          bottomHelpMessage: "原神语音合成密钥",
-          component: "Input",
-          componentProps: {
-            placeholder: '请输入原神语音合成密钥',
-          },
-        },
       ],
       getConfigData() {
         let config = Config.getConfig()
