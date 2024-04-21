@@ -3,7 +3,7 @@ import fs from 'fs';
 import fetch from 'node-fetch';
 import Config from './Config.js';
 
-const other_params = { "lang": "zh", "appid": "ig8t76x6036h3hpw", "sdp_ratio": 0.2, "noise": 0.6, "noisew": 0.8, "length": 1 };
+const other_params = [0.5, 0.6, 0.9, 1, "ZH", false, 1, 0.2, null, "Happy", "", 0.7];
 
 export async function TextToSpeech(speaker, text, config) {
     const pluginPath = `${pluginResources}/Genshin-TTS/${config.use_interface_sources}.json`;
@@ -24,30 +24,28 @@ export async function TextToSpeech(speaker, text, config) {
 }
 
 async function getVoice(space, text) {
+    const data = {
+        "data": [text, space.speaker, ...other_params],
+        "fn_index": 0,
+        "session_hash": Math.random().toString(36).substring(2, 13)
+    };
 
+    const result = await fetchPost(space.url, data);
+    if (result && result.data[0] == 'Success') {
+        return space.file + result.data[1].name;
+    }
+    return null;
+}
+
+async function fetchPost(url, data) {
     try {
-        const response = await fetch(space.url, {
+        const response = await fetch(url, {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                "token": await Config.getConfig().genshin_tts_token,
-                "speaker": space.name,
-                "text": text,
-                ...other_params
-            }),
+            body: JSON.stringify(data),
         });
-        const data = await response.json();
-        if (data.status !== 1) {
-            logger.error(data.message);
-            return null;
-        }
-
-        return data.audio
-
+        return response.json();
     } catch (error) {
-        logger.error(error);
+        logger.error(error)
         return null;
     }
 }
