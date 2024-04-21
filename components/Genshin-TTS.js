@@ -1,7 +1,6 @@
 import { pluginResources } from '../model/path.js';
 import fs from 'fs';
 import fetch from 'node-fetch';
-import Config from './Config.js';
 
 const other_params = [0.5, 0.6, 0.9, 1, "ZH", false, 1, 0.2, null, "Happy", "", 0.7];
 
@@ -41,6 +40,9 @@ async function fetchPost(url, data) {
     try {
         const response = await fetch(url, {
             method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
             body: JSON.stringify(data),
         });
         return response.json();
