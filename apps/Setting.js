@@ -46,6 +46,12 @@ export class setting extends plugin {
         },
         {
           /** 命令正则匹配 */
+          reg: '^[/#]?vits发音人$',
+          /** 执行方法 */
+          fnc: 'getSpeaker',
+        },
+        {
+          /** 命令正则匹配 */
           reg: '^[/#]?vits(开启|关闭)提示$',
           /** 执行方法 */
           fnc: 'setTip',
@@ -78,9 +84,9 @@ export class setting extends plugin {
         },
         {
           /** 命令正则匹配 */
-          reg: '^[/#]?vits发音人$',
+          reg: '^[/#]?vits同传发音人$',
           /** 执行方法 */
-          fnc: 'getSpeaker',
+          fnc: 'getSyncSpeaker',
         },
         {
           /** 命令正则匹配 */
@@ -149,6 +155,23 @@ export class setting extends plugin {
     const msg = `当前源为：${config.tts_config.use_interface_sources}\n支持的源有：\n${supportedSources}`;
 
     e.reply(msg);
+    return true;
+  }
+
+  async getSpeaker(e) {
+    const config = await Config.getConfig();
+    const userConfig = config.tts_config
+
+    const dataPath = path.join(pluginResources, userConfig.use_model_type, userConfig.use_interface_sources + '.json');
+    const data = JSON.parse(fs.readFileSync(dataPath));
+    const speakersList = data.space.map((sp, index) => `${index + 1}.${sp.name}`).join('\n');
+
+    const msg = []
+    msg.push({ message: `当前使用的模型类型为：${userConfig.use_model_type}`})
+    msg.push({ message: `当前使用的源为：${userConfig.use_interface_sources}`})
+    msg.push({ message: `支持的发音人有：\n${speakersList}`})
+
+    e.reply(Bot.makeForwardMsg(msg));
     return true;
   }
 
@@ -275,7 +298,7 @@ export class setting extends plugin {
     return true;
   }
 
-  async getSpeaker(e) {
+  async getSyncSpeaker(e) {
     const config = await Config.getConfig();
     const userSyncConfig = config.tts_sync_config.find(item => item.user_id == e.user_id);
 
@@ -288,12 +311,12 @@ export class setting extends plugin {
     const data = JSON.parse(fs.readFileSync(dataPath));
     const speakersList = data.space.map((sp, index) => `${index + 1}.${sp.name}`).join('\n');
 
-    const msg = `当前同传发音人为：${userSyncConfig.use_speaker}\n` +
-      `当前使用的模型类型为：${userSyncConfig.use_model_type}\n` +
-      `当前使用的源为：${userSyncConfig.use_interface_sources}\n` +
-      `支持的发音人有：\n${speakersList}`;
+    const msg = []
+    msg.push({ message: `当前使用的模型类型为：${userSyncConfig.use_model_type}`})
+    msg.push({ message: `当前使用的源为：${userSyncConfig.use_interface_sources}`})
+    msg.push({ message: `支持的发音人有：\n${speakersList}`})
 
-    e.reply(msg);
+    e.reply(Bot.makeForwardMsg(msg));
     return true;
   }
 

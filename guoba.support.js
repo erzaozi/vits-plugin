@@ -152,6 +152,7 @@ export function supportGuoba() {
           lodash.set(config, keyPath, value)
         }
         config = lodash.merge({}, Config.getConfig(), config)
+        config.tts_sync_config = data['tts_sync_config']
         Config.setConfig(config)
         return Result.ok({}, '保存成功~')
       },
