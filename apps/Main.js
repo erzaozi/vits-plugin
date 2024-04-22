@@ -20,7 +20,9 @@ export class vits_sync extends plugin {
           /** 命令正则匹配 */
           reg: '',
           /** 执行方法 */
-          fnc: 'sync'
+          fnc: 'sync',
+          /** 关闭日志 */
+          log: false
         }
       ]
     })

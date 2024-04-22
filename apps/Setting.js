@@ -87,14 +87,6 @@ export class setting extends plugin {
           reg: '^[/#]?vits同传发音人$',
           /** 执行方法 */
           fnc: 'getSyncSpeaker',
-        },
-        {
-          /** 命令正则匹配 */
-          reg: '^[/#]?vits设置原神密钥.*$',
-          /** 执行方法 */
-          fnc: 'setGenshinKey',
-          /** 主人权限 */
-          permission: 'master'
         }
       ]
     })
@@ -102,8 +94,8 @@ export class setting extends plugin {
 
   async setModelType(e) {
     let config = await Config.getConfig();
-    let modelTypes = fs.readdirSync(pluginResources)
-      .filter(file => fs.statSync(path.join(pluginResources, file)).isDirectory());
+    const modelTypes = fs.readdirSync(pluginResources)
+      .filter(file => fs.statSync(path.join(pluginResources, file)).isDirectory() && file !== 'readme');
     let modelType = e.msg.replace(/^[/#]?vits设置模型/, '').trim();
 
     if (modelTypes.includes(modelType)) {
@@ -121,7 +113,7 @@ export class setting extends plugin {
     const config = await Config.getConfig();
     const modelType = config.tts_config.use_model_type;
     const modelTypes = fs.readdirSync(pluginResources)
-      .filter(file => fs.statSync(path.join(pluginResources, file)).isDirectory());
+      .filter(file => fs.statSync(path.join(pluginResources, file)).isDirectory() && file !== 'readme');
 
     const supportedModelTypes = modelTypes.map((type, index) => `${index + 1}.${type}`).join('\n');
     const msg = `当前模型类型为：${modelType}\n支持的模型类型有：\n${supportedModelTypes}`;
@@ -318,18 +310,5 @@ export class setting extends plugin {
 
     e.reply(Bot.makeForwardMsg(msg));
     return true;
-  }
-
-  async setGenshinKey(e) {
-    const config = await Config.getConfig();
-    const message = e.msg.replace(/^[/#]?vits设置原神密钥/, '').trim();
-    if (message) {
-      config.genshin_tts_token = message;
-      await Config.setConfig(config);
-      e.reply('原神语音合成密钥设置成功');
-    } else {
-      e.reply('请发前往\nhttps://tts.ai-hobbyist.org/#/apikey\n获取原神语音合成密钥');
-      return true;
-    }
   }
 }
