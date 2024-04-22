@@ -274,7 +274,7 @@ export class setting extends plugin {
     const speakersData = JSON.parse(fs.readFileSync(speakersDataPath));
     const speakerName = e.msg.replace(/^[/#]?vits设置同传发音人/, '').trim();
     if (!speakerName) {
-      e.reply('发音人不存在，请发送【#vits发音人】查看支持的发音人')
+      e.reply('发音人不存在，请发送【#vits同传发音人】查看支持的发音人')
       return true
     }
     const speakerEntry = speakersData.space.find(sp => sp.name === speakerName || sp.name.includes(speakerName));
@@ -284,7 +284,7 @@ export class setting extends plugin {
       await Config.setConfig(config);
       e.reply(`同传发音人设置成功，当前发音人为：${speakerName}`);
     } else {
-      e.reply('发音人不存在，请发送【#vits发音人】查看支持的发音人');
+      e.reply('发音人不存在，请发送【#vits同传发音人】查看支持的发音人');
     }
 
     return true;
