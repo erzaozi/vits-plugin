@@ -7,16 +7,17 @@ export function supportGuoba() {
   return {
     pluginInfo: {
       name: 'vits-plugin',
-      title: 'vits-plugin',
+      title: '在线VITS插件',
       author: ['@erzaozi', '@CikeyQi'],
       authorLink: ['https://github.com/erzaozi', 'https://github.com/CikeyQi'],
       link: 'https://github.com/erzaozi/vits-plugin',
       isV3: true,
       isV2: false,
-      description: '基于Yunzai-Bot的语音合成插件',
+      showInMenu: true,
+      description: '基于 Yunzai 的在线语音合成插件',
       // 显示图标，此为个性化配置
       // 图标可在 https://icon-sets.iconify.design 这里进行搜索
-      icon: 'mdi:stove',
+      icon: 'icon-park:voice-message',
       // 图标颜色，例：#FF0000 或 rgb(255, 0, 0)
       iconColor: '#d19f56',
       // 如果想要显示成图片，也可以填写图标路径（绝对路径）
