@@ -2,4 +2,5 @@ tts_config:
   use_model_type: Bert-VITS2
   use_interface_sources: Modelscope
   send_reminder: true
+  send_base64: false
 tts_sync_config: []
