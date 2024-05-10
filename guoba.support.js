@@ -66,7 +66,7 @@ export function supportGuoba() {
         },
         {
           field: "tts_config.send_base64",
-          label: "使用 Base64 格式发送语音",
+          label: "Base64 发送",
           bottomHelpMessage: "避免网络质量不佳导致的语音无法发出",
           component: "Switch",
         },
