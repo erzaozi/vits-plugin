@@ -1,8 +1,6 @@
 import { pluginResources } from '../model/path.js';
 import fs from 'fs';
-import fetch from 'node-fetch';
-
-const other_params = [0.5, 0.6, 0.9, 1, "ZH", false, 1, 0.2, null, "Happy", "", 0.7];
+import ws from 'ws';
 
 export async function TextToSpeech(speaker, text, config) {
     const pluginPath = `${pluginResources}/Genshin-TTS/${config.use_interface_sources}.json`;
@@ -23,31 +21,185 @@ export async function TextToSpeech(speaker, text, config) {
 }
 
 async function getVoice(space, text) {
-    const data = {
-        "data": [text, space.speaker, ...other_params],
-        "fn_index": 0,
-        "session_hash": Math.random().toString(36).substring(2, 13)
-    };
-
-    const result = await fetchPost(space.url, data);
-    if (result && result.data[0] == 'Success') {
-        return space.file + result.data[1].name;
-    }
-    return null;
+    const hash = Math.random().toString(36).substring(2, 12);
+    const textData = await getTextData(space, hash);
+    const audioData = await getAudioData(space, hash, textData);
+    audioData[0].data = space.file + audioData[0].name;
+    const voiceData = await getVoiceData(space, hash, textData, audioData, text);
+    return space.file + voiceData;
 }
 
-async function fetchPost(url, data) {
-    try {
-        const response = await fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
+async function getTextData(space, hash) {
+    return new Promise((resolve, reject) => {
+        let ws_client = new ws(space.url);
+
+        ws_client.on("open", () => {
         });
-        return response.json();
-    } catch (error) {
-        logger.error(error)
-        return null;
-    }
+
+        ws_client.on("message", event => {
+            event = JSON.parse(event);
+            switch (event.msg) {
+                case "send_hash":
+                    ws_client.send(JSON.stringify({
+                        session_hash: hash,
+                        fn_index: 1,
+                    }));
+                    break;
+                case "estimation":
+                    {
+                        break;
+                    };
+                case "send_data":
+                    ws_client.send(JSON.stringify({
+                        "data": [space.speaker],
+                        "fn_index": 1,
+                        "session_hash": hash,
+                    }));
+                    break;
+                case "process_starts":
+                    {
+                        break;
+                    }
+                case "process_completed":
+                    ws_client.close();
+                    if (event.success) {
+                        resolve(event.output.data);
+                    } else {
+                        reject(event.output.data);
+                    }
+                    break;
+                case "process_failed":
+                    ws_client.close();
+                    reject(event.output.data);
+                    break;
+            }
+        });
+
+        ws_client.on("error", error => {
+            ws_client.close();
+            reject(error);
+        });
+
+        ws_client.on("close", () => {
+
+        });
+    });
+}
+
+async function getAudioData(space, hash, data) {
+    return new Promise((resolve, reject) => {
+        let ws_client = new ws(space.url);
+
+        ws_client.on("open", () => {
+        });
+
+        ws_client.on("message", event => {
+            event = JSON.parse(event);
+            switch (event.msg) {
+                case "send_hash":
+                    ws_client.send(JSON.stringify({
+                        session_hash: hash,
+                        fn_index: 2,
+                    }));
+                    break;
+                case "estimation":
+                    {
+                        break;
+                    };
+                case "send_data":
+                    ws_client.send(JSON.stringify({
+                        "data": [data[0]],
+                        "fn_index": 2,
+                        "session_hash": hash,
+                    }));
+                    break;
+                case "process_starts":
+                    {
+                        break;
+                    }
+                case "process_completed":
+                    ws_client.close();
+                    if (event.success) {
+                        resolve(event.output.data);
+                    } else {
+                        reject(event.output.data);
+                    }
+                    break;
+                case "process_failed":
+                    ws_client.close();
+                    reject(event.output.data);
+                    break;
+            }
+        });
+
+        ws_client.on("error", error => {
+            ws_client.close();
+            reject(error);
+        });
+
+        ws_client.on("close", () => {
+
+        });
+    });
+}
+
+async function getVoiceData(space, hash, textData, audioData, text) {
+    return new Promise((resolve, reject) => {
+        let ws_client = new ws(space.url);
+
+        ws_client.on("open", () => {
+        });
+
+        ws_client.on("message", event => {
+            event = JSON.parse(event);
+            switch (event.msg) {
+                case "send_hash":
+                    ws_client.send(JSON.stringify({
+                        session_hash: hash,
+                        fn_index: 4,
+                    }));
+                    break;
+                case "estimation":
+                    {
+                        break;
+                    };
+                case "send_data":
+                    ws_client.send(JSON.stringify({
+                        "data": [text, true, audioData[0], textData[1], 0, 48, 0.7, 1.5, 0.7, space.speaker],
+                        "fn_index": 4,
+                        "session_hash": hash,
+                    }));
+                    break;
+                case "process_starts":
+                    {
+                        break;
+                    }
+                case "process_generating":
+                    {
+                        break;
+                    }
+                case "process_completed":
+                    ws_client.close();
+                    if (event.success) {
+                        resolve(event.output.data[0].name);
+                    } else {
+                        reject(event.output.data);
+                    }
+                    break;
+                case "process_failed":
+                    ws_client.close();
+                    reject(event.output.data);
+                    break;
+            }
+        });
+
+        ws_client.on("error", error => {
+            ws_client.close();
+            reject(error);
+        });
+
+        ws_client.on("close", () => {
+
+        });
+    });
 }
