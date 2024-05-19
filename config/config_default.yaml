@@ -4,3 +4,4 @@ tts_config:
   send_reminder: true
   send_base64: false
 tts_sync_config: []
+modelscope_cookie: ''

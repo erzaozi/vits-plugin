@@ -71,6 +71,15 @@ export function supportGuoba() {
           component: "Switch",
         },
         {
+          field: "modelscope_cookie",
+          label: "Modelscope Cookie",
+          bottomHelpMessage: "用于需要登录的魔搭平台创空间验证",
+          component: "Input",
+          componentProps: {
+            placeholder: '请输入 Cookie',
+          },
+        },
+        {
           component: "Divider",
           label: "同传 相关配置",
           componentProps: {

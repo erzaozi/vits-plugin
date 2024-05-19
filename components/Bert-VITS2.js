@@ -2,6 +2,7 @@ import { pluginResources } from '../model/path.js';
 import fs from 'fs';
 import fetch from 'node-fetch';
 import ws from 'ws';
+import Config from '../components/Config.js'
 
 const other_params = [0.6, 0.5, 0.9, 1, "ZH", null, "Happy", "Text prompt", "", 0.7];
 
@@ -52,6 +53,10 @@ async function fetchPost(url, data) {
         const response = await fetch(url, {
             method: 'POST',
             body: JSON.stringify(data),
+            headers: {
+                'Content-Type': 'application/json',
+                'Cookie': Config.getConfig().modelscope_cookie
+            }
         });
         return response.json();
     } catch (error) {
