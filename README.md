@@ -39,6 +39,15 @@ pnpm install --filter=vits-plugin
 > [!WARNING]
 > 非常不建议手动修改配置文件，本插件已兼容 [Guoba-plugin](https://github.com/guoba-yunzai/guoba-plugin) ，请使用锅巴插件对配置项进行修改
 
+<details> <summary>获取 Modelscope Cookie</summary>
+
+1. 打开 [随便一个需要登录才能使用的空间](https://www.modelscope.cn/studios/xzjosh/DZ-Bert-VITS2-2.3/summary) 并登录，`Ctrl + Shift + I` 打开开发者工具 ，点击 `网络`
+2. 等待出现 `status` 请求，点击该请求，复制 `Cookie` 字段即可（注意复制完整）
+
+![cookie](https://github.com/erzaozi/vits-plugin/assets/61369914/1501ff49-b6d4-4434-b449-13fa44d23b38)
+
+</details>
+
 ## 功能列表
 
 请使用 `#vits帮助` 获取完整帮助
