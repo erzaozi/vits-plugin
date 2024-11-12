@@ -5,4 +5,3 @@ tts_config:
   send_base64: false
 tts_sync_config: []
 modelscope_cookie: ''
-fishaudio_authorization: ''

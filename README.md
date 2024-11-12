@@ -6,7 +6,7 @@
 
 - 一个适用于 [Yunzai 系列机器人框架](https://github.com/yhArcadia/Yunzai-Bot-plugins-index) 的的 AI 语音合成插件，让你能够在机器人中使用 AI 语音合成功能
 
-- 使用著名 AI 社区 [Huggingface](https://huggingface.co/) 和国内知名 AI 社区 [Modelscope](https://www.modelscope.cn/) 的接口，支持 BERT-VITS2、GPT-SoVITS、Fish-Audio 等模型，对自身硬件没有要求，降低了使用门槛，让更多人体验 AI 语音合成的乐趣。
+- 使用著名 AI 社区 [Huggingface](https://huggingface.co/) 和国内知名 AI 社区 [Modelscope](https://www.modelscope.cn/) 的接口，对自身硬件没有要求，降低了使用门槛，让更多人体验 AI 语音合成的乐趣。
 
 - **使用中遇到问题请加 QQ 群咨询：[707331865](https://qm.qq.com/q/TXTIS9KhO2)**
 
@@ -22,10 +22,10 @@ git clone https://github.com/erzaozi/vits-plugin.git ./plugins/vits-plugin
 ```
 
 > [!NOTE]
-> 如果你的网络环境较差，无法连接到 Github，可以使用 [GitHub Proxy](https://mirror.ghproxy.com/) 提供的文件代理加速下载服务
+> 如果你的网络环境较差，无法连接到 Github，可以使用 [GitHub Proxy](https://ghp.ci/) 提供的文件代理加速下载服务
 >
 > ```
-> git clone https://mirror.ghproxy.com/https://github.com/erzaozi/vits-plugin.git ./plugins/vits-plugin
+> git clone https://ghp.ci/https://github.com/erzaozi/vits-plugin.git ./plugins/vits-plugin
 > ```
 
 #### 2. 安装依赖
@@ -48,15 +48,6 @@ pnpm install --filter=vits-plugin
 
 </details>
 
-<details> <summary>获取 Fish-Audio Token</summary>
-
-1. 打开 [Fish Audio](https://fish.audio/zh-CN/text-to-speech) 并登录，`Ctrl + Shift + I` 打开开发者工具 ，点击 `网络`
-2. 尝试在网页生成一次，等待出现 `task` 请求，点击该请求，复制 `Authorization` 字段即可（注意复制完整）
-
-![cookie](https://github.com/erzaozi/vits-plugin/assets/61369914/2b3b4e6a-9373-4b99-808e-401934d75564)
-
-</details>
-
 ## 功能列表
 
 请使用 `#vits帮助` 获取完整帮助
@@ -76,8 +67,8 @@ resources
 ├───GPT-SoVITS
 │   ├───Modelscope.json
 │   └───Huggingface.json
-└───Fish-Audio
-    └───Fish-Audio.json
+└───AI-Hobbyist
+    └───AI-Hobbyist.json
 ```
 
 要使用对应模型才能使用对应源中的发音人，举个例子，使用 `Bert-VITS2` 模型时能选择 `Modelscope` 和 `Huggingface` 两个源，但不同模型的源是完全不一样的，里面的发音人也不一样，请参考下表找到你想要的发音人位置
@@ -156,121 +147,71 @@ resources
 
 </details>
 
-### 🥕Fish-Audio
+### 🥕AI Hobbyist
 
 <details><summary>点击展开</summary>
 
-|         模型名称         |        模型名称        |        模型名称         |         模型名称          |
-| :----------------------: | :--------------------: | :---------------------: | :-----------------------: |
-|           丁真           |        AD 学姐         |       纪录片旁白        |         永雏塔菲          |
-|     POTUS 45 - Trump     |          流萤          |       七海みなみ        |           阿梓            |
-|          芙宁娜          |          符玄          |        雷电将军         |          董宇辉           |
-|          邓紫琪          |   丁真（锐刻五代版）   |        电棍 otto        |           派蒙            |
-|          单田芳          |         扣比不         |          黑手           |        孙笑川 258         |
-|       七海 Nana7mi       |          刻晴          |          钟离           |          冰糖 IO          |
-|        李立宏美食        |       AI 沈子钧        |          黄泉           |           花火            |
-|         棋手战鹰         |          弘历          |       明前奶绿 2        |          纳西妲           |
-|         井芹仁菜         |         东雪莲         |     尼奈（猫娘版）      | Robin (Honkai: Star Rail) |
-|           炫神           |        赤井秀一        |          银枝           |           砂金            |
-|          巴图鲁          |          胡桃          |         明日香          |           空 1            |
-|        花火导演 1        |          星瞳          |        旭旭宝宝         |          黑天鹅           |
-|  亚太空间合作组织秘书长  |          温迪          |            1            |           尼奈            |
-|         アルマ２         |         孙笑川         |        记者 2.0         |          希格雯           |
-|           huhu           |          试试          |          唐僧           |            米             |
-|          coco1           |        夹子米虫        |        包包大人         |         baicai_ZH         |
-|            算            |          烟绯          |        男 2 常用        |     偶像大师 新田美波     |
-|         枣伊吕波         |         亚托莉         |         罗永浩          |          佛耶戈           |
-|          斯维因          |        布洛妮娅        |          小桃           |           扇宝            |
-|          袁腾飞          |         东方镜         |          waner          |           管家            |
-|        晶蓝研究室        |      Ageha Shama       |         古美门          |            nkl            |
-|           md1            |       露早 GOGO        |        baicai_JP        |      青春恋物 纯爱酱      |
-|          Sakura          |          卖卖          |         夏目蓝          |         小熊维尼          |
-|         蓝斯报站         |           影           |         老母亲          |        企业宣传片         |
-|      chouxiangping1      |          作曲          |           mm            |         农村生活          |
-|        Meow Moew         |          ttt2          |          流萤           |            ali            |
-|           jian           |          余切          |         战鹰 01         |          派蒙 1           |
-|           多人           |      流浪者\_原神      |         qixuanm         |           扇宝            |
-|          Qinlan          |          coco          |         安和昴          |           wannn           |
-|         昆虫学者         |          记者          |          白露           |          艾丝妲           |
-|           测试           |         姐姐 1         |        扣税国王         |        浊心斯卡蒂         |
-|         明前奶绿         |           ？           |        菩提祖师         |         AI 李奥翔         |
-|          周棋洛          |      奥尔菲斯 2.0      |           🥕            |          撒贝宁           |
-|           全蛋           |        dongbei         |        溜溜 leo         |            WY             |
-|          琳妮特          |          ling          |          MOSS           |          崔永元           |
-|        明日方舟 W        |         夏提雅         |          陈冲           |           Negan           |
-|          ID001           |         佛耶戈         |        汤圆四水         |          悟空 1           |
-|          郑容和          |           dw           |           敖            |           文静            |
-|          aishe           |       战场原黑仪       |          niao           |            我             |
-|           测试           |        匠心帝。        |          雷军           |         神里绫华          |
-|           tts            |         Within         |          藿藿           |          飞虎队           |
-|           测试           |        阿里马斯        |          tttt           |           后羿            |
-|          高松灯          |         相泽南         |          甘雨           |           ayane           |
-|    June (The Finals)     |         张顺飞         |       明日方舟山        |         AI 何佳宇         |
-|           hhjk           |       河原木桃香       |           xwy           |           星瞳            |
-|          huawei          |          流萤          |           lu            |          邓女士           |
-|         Natsuhi          |        爱莉希雅        |        露西（en         |      七濑胡桃中文 ai      |
-|          大家好          |          阿兰          |           pzd           |           王二            |
-|       Harold Finch       |         yanhe          |         LUO-002         |       温柔动听女声        |
-|       Taylor Swift       |         包龙星         |     凯伦（实验版）      |            22             |
-|        洛天依\_灵        |        次生银翼        |      爱衣休伯利安       |         露西（zh          |
-|           awei           |     52ba 乌尔比安      |           gyh           |           卖卖            |
-|         w 的声音         |         凯尔希         | 明日方舟 特雷西娅、魔王 |           Rupa            |
-|            fy            |         liuliu         |         lamune          |           狗蛋            |
-|           测试           |         高血压         |         xiaohua         |     霸道姐姐 sweetbox     |
-|            qy            |         赵本山         |           Dr            |        大和田常务         |
-|          Xixixi          |         邓浩洋         |          炫烨           |            雨             |
-|         温柔女声         |          凤凤          |       MG 动画男声       |     毕业季温情女学生      |
-|          boss3           |         刘德科         |          湖普           |      企业宣传片-大气      |
-|          彩虹红          |        幽兰黛尔        |         胖宝宝          |            11             |
-|        洛天依\_柔        |           WK           |      听不懂思密达       |  嘟嘟\_学校广播电台\_CN   |
-|          波提欧          |           刃           |        剑先鹤城         |            令             |
-|      东风谷早苗 mv       |        萨格尔王        |          男 1           |            pjs            |
-|           夏生           |         田二喜         |          dons           |          无添加           |
-|            md            |          test          |           WKR           |          大司马           |
-|      陈功的声音模型      |         测试 1         |           me            |            lze            |
-|           男 1           |          ling          |       二次元妲己        |            凡             |
-|        Freeind AI        |          test          |  大家的日语中级 1 阅读  |            JJ             |
-|        Max テスト        |         henry          |          暗人           |           阿星            |
-|          tstt2           |          test          |        憨堡 Ger         |            hou            |
-|           moss           |         slang          |         李素裳          |         独人十三          |
-|           liu            |           33           |          test           |         永雏小菲          |
-|      丹花伊吹 ibkui      |           1            |          9729           |         广西大师          |
-|           9729           |          小孩          |        迪奥娜 ZH        |    Scotty (The Finals)    |
-|            8             |          boss          |          包子           |           扇宝            |
-|           络希           |          007           |          嘉然           |         AI 李奥翔         |
-|          beagle          |        海老塚智        |           司            |          测试 1           |
-|            1             |        奥尔菲斯        |           33            |          老叶 2           |
-|          周星驰          |         安仁 2         |          发姐           |       Ngo Lan Huong       |
-|          ouyang          |          ces           |           mfq           |        瓶子君 152         |
-|           Mun            |       瓶子君 152       |          鱼头           |           SELF            |
-|          个人 C          |        Sheldon         |          萧炎           |            wan            |
-|         然然 2.0         |          科比          |        维什戴尔         |           然然            |
-|     jingxiangshuiyi      |        marklin         |           JJJ           |         ele_read          |
-|          xm_01           |        抖音米敏        |          自己           |        测试单田芳         |
-|            y             |           1            |            1            |           6653            |
-|          芙宁娜          |        jackzou         |      北方老师的话       |         没有没有          |
-|           康辉           |         董宇辉         |     芽衣\_雷之律者      |    琪亚娜\_薪炎之律者     |
-|         梅比乌斯         |          凯文          |       夏提雅中文        |            gmz            |
-|        My Voice 2        |        My Voice        |           rui           |           测试            |
-|            2             |          222           |          1111           |       logos 逻各斯        |
-|           测试           | 嘟嘟\_商超女播报员\_CN |           xjp           |            hjj            |
-|            ll            |         Negan          |         小孩 ZH         |          萌小天           |
-|       fisher_test1       |       莹凡的声音       |          米诺           |           hiyo            |
-| 2024.01.27 旅行骑士 CPA1 |         Y10REO         |        哈哈哈哈         |        鱿鱼安静吗         |
-|           小 U           |          居居          |          居居           |          袁腾飞           |
-|          梁宏达          |        阿波尼亚        |        萝莎莉娅         |          菲谢尔           |
-|           莱尔           |         莉莉娅         |         苏莎娜          |            苏             |
-|           芽衣           |         缇米朵         |         维尔薇          |      符华\_识之律者       |
-|      符华\_云墨丹心      |          符华          |         科斯魔          |     琪亚娜\_空之律者      |
-|          琪亚娜          |        狂热蓝调        |          爱衣           |           渡鸦            |
-|          格蕾修          |    德丽莎\_月下初拥    |         德丽莎          |        帕朵菲莉丝         |
-|         希儿\_黑         |          希儿          |   布洛妮娅\_迷城骇兔    |    布洛妮娅\_次生银翼     |
-|         布洛妮娅         |     姬子\_极地战刃     |          姬子           |          卡萝尔           |
-|           卡莲           |          千劫          |         八重樱          |           伊甸            |
-|        人偶\_赤鸢        |       人偶\_贝拉       |       人偶\_西琳        |        人偶\_若水         |
-|        人偶\_苍玄        |      人偶\_绯玉丸      |    人偶\_特斯拉 Zero    |        人偶\_爱酱         |
-|     人偶\_晓月镇魂歌     |     人偶\_妖精爱莉     |   人偶\_圣剑幽兰黛尔    |       人偶\_克莱因        |
-|       人偶\_仿犹大       |          丽塔          |          主角           |     June (The Finals)     |
+**如果想帮助 AI Hobbyist 的免费语音合成网站运行下去，可以通过该爱发电赞助：https://afdian.com/a/baicai1145**
+
+|                模型名称                |      模型名称      |              模型名称              |     模型名称     |
+| :------------------------------------: | :----------------: | :--------------------------------: | :--------------: |
+|                 Fairy                  |       11 号        |                七七                |      三月七      |
+|                  丹恒                  |        丽塔        |                丽娜                |       丽莎       |
+|                 久岐忍                 |      乔普师傅      |              九条裟罗              |       云堇       |
+|                  云璃                  |        五郎        |                亚莎                |       伊甸       |
+|          伏特加女孩\_狂热蓝调          | 伏特加女孩\_莉莉娅 |        伏特加女孩\_萝莎莉娅        |       优菈       |
+|                  佩拉                  |        停云        |               克拉拉               |     克洛琳德     |
+|                 八重樱                 |      八重神子      |                凝光                |       凯亚       |
+|                 凯瑟琳                 |         刃         |                刻晴                |       刻晴       |
+|                 加拉赫                 |        北斗        |                千织                |       卡维       |
+|                 卡芙卡                 |        卡莲        |               卡萝尔               |       卢卡       |
+|                  可琳                  |        可莉        |                 哲                 |       嘉明       |
+|                 坎蒂丝                 |       埃洛伊       |               夏沃蕾               |      夏洛蒂      |
+|                  多莉                  |        夜兰        |                奥兹                |       妮可       |
+|                  妮露                  |        姬子        |                姬子                |      娜塔莎      |
+|                 娜维娅                 |        安东        |                安柏                |       安比       |
+|                  宵宫                  |        寒鸦        |             寻梦者(女)             |    寻梦者(男)    |
+|           布洛妮娅\_次生银翼           |      布洛妮娅      |              布洛妮娅              |  希儿\_魇夜星渊  |
+|                  希儿                  |        希儿        |              希娜狄雅              |      希格雯      |
+|                 希露瓦                 |     帕朵菲莉丝     |              幽兰黛尔              |    开拓者(女)    |
+|               开拓者(男)               |        彦卿        |          德丽莎\_月下初拥          | 德丽莎\_月下誓约 |
+|            德丽莎\_朔夜观星            |       德丽莎       |                恩佐                |       悠真       |
+|               戴因斯雷布               |     托帕&账账      |                托马                |      提纳里      |
+|                  早柚                  |      时雨绮罗      |             普罗米修斯             |       景元       |
+|                   本                   |        朱鸢        |               李素裳               |      杰帕德      |
+|                  松雀                  |        林尼        |              枫原万叶              |       柯莱       |
+|                 格莉丝                 |       格蕾修       |          格雷修\_绘星之卷          |      桂乃芬      |
+|                  桑博                  |      梅比乌斯      |                椒丘                |       比利       |
+|                 波提欧                 |        派蒙        |               流浪者               |       流萤       |
+|                  渡鸦                  |        温迪        |                 灯                 |       烟绯       |
+|                爱莉希雅                |        爱衣        |                猫又                |       玲可       |
+|                 珂蕾妲                 |     珊瑚宫心海     |               珐露珊               |      班尼特      |
+| 琪亚娜*天穹游侠*薪炎之律者\_终焉之律者 |  琪亚娜\_空之律者  |               琪亚娜               |      琳妮特      |
+|                   琴                   |      瑟拉珮姆      |               瑟莉姆               |       瑶瑶       |
+|                 瓦尔特                 |        甘雨        |                申鹤                |       白术       |
+|                  白露                  |      真理医生      |               知更鸟               |       砂糖       |
+|                  砂金                  |      神里绫人      |              神里绫华              |      科拉莉      |
+|                   空                   |   符华\_文墨丹心   |           符华\_识之律者           |       符华       |
+|                  符玄                  |        米卡        |                米沙                |       素裳       |
+|                纯水精灵                |       纳西妲       |               绮良良               |      维尔薇      |
+|                  罗刹                  |      罗莎莉亚      |                羽兔                |       翡翠       |
+|                  胡桃                  |       艾丝妲       |              艾尔海森              |     艾梅莉埃     |
+|                  艾莲                  |      芙卡洛斯      |               芙宁娜               |      芭芭拉      |
+|                  芮恩                  |        花火        | 芽衣*断罪影舞*雷之律者\_始源之律者 |       芽衣       |
+|                  苍角                  |        苏茜        |               苏莎娜               |     荒泷一斗     |
+|                   荧                   |        莎拉        |                莫娜                |      莱依拉      |
+|                 莱卡恩                 |      莱欧斯利      |               菲米尼               |      菲谢尔      |
+|                 菲谢尔                 |       萍姥姥       |                藿藿                |       虎克       |
+|                  行秋                  |        西琳        |               诺艾尔               |       赛诺       |
+|                 赫丽娅                 |        辛焱        |              达达利亚              |      迪卢克      |
+|                 迪奥娜                 |      迪娜泽黛      |               迪希雅               |     那维莱特     |
+|                  重云                  |        钟离        |                 铃                 |       银枝       |
+|                  银狼                  |        镜流        |                闲云                |      阮•梅       |
+|                  阿兰                  |      阿波尼亚      |              阿蕾奇诺              |      阿贝多      |
+|                   雅                   |        雪衣        |                雷泽                |     雷电将军     |
+|                  青衣                  |        青雀        |                香菱                |       驭空       |
+|                   魈                   |     鹿野院平藏     |                黄泉                |       黑塔       |
+|                 黑天鹅                 |       黑希儿       |                                    |                  |
 
 </details>
 
@@ -289,7 +230,7 @@ resources
 
 - [Bert-VITS2](https://github.com/fishaudio/Bert-VITS2)：vits2 backbone with multilingual-bert
 - [GPT-SoVITS](https://github.com/RVC-Boss/GPT-SoVITS)：1 min voice data can also be used to train a good TTS model! (few shot voice cloning)
-- [Fish-Audio](https://fish.audio)：Brand new TTS solution
+- [AI-Hobbyist](https://gsv.acgnai.top)：原神 & 星穹铁道 & 绝区零 & 崩坏3语音合成 GPT-Sovits 在线语音合成
 
 ## 许可证
 

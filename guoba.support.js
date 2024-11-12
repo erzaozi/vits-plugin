@@ -42,7 +42,7 @@ export function supportGuoba() {
             options: [
               { label: "Bert-VITS2", value: "Bert-VITS2" },
               { label: "GPT-SoVITS", value: "GPT-SoVITS" },
-              { label: "Fish-Audio", value: "Fish-Audio" },
+              { label: "AI-Hobbyist", value: "AI-Hobbyist" },
             ],
           },
         },
@@ -77,15 +77,6 @@ export function supportGuoba() {
           component: "Input",
           componentProps: {
             placeholder: '请输入 Cookie',
-          },
-        },
-        {
-          field: "fishaudio_authorization",
-          label: "Fish-Audio Token",
-          bottomHelpMessage: "用于需要登录的Fish Audio平台",
-          component: "Input",
-          componentProps: {
-            placeholder: '请输入 Token',
           },
         },
         {
@@ -140,7 +131,7 @@ export function supportGuoba() {
                   options: [
                     { label: "Bert-VITS2", value: "Bert-VITS2" },
                     { label: "GPT-SoVITS", value: "GPT-SoVITS" },
-                    { label: "Fish-Audio", value: "Fish-Audio" },
+                    { label: "AI-Hobbyist", value: "AI-Hobbyist" },
                   ],
                 },
               },

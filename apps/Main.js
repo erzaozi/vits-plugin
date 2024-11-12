@@ -2,7 +2,7 @@ import plugin from '../../../lib/plugins/plugin.js'
 import Config from '../components/Config.js'
 import { TextToSpeech as BertVITSTextToSpeech } from '../components/Bert-VITS2.js';
 import { TextToSpeech as GPTSoVITSTextToSpeech } from '../components/GPT-SoVITS.js';
-import { TextToSpeech as FishAudioTTSTextToSpeech } from '../components/Fish-Audio.js';
+import { TextToSpeech as AIHobbyistTTSTextToSpeech } from '../components/AI-Hobbyist.js';
 import { getRecord } from '../components/Record.js'
 
 export class vits_sync extends plugin {
@@ -42,8 +42,8 @@ export class vits_sync extends plugin {
 
       if (c.use_model_type == 'GPT-SoVITS') {
         url = await GPTSoVITSTextToSpeech(c.use_speaker, e.msg, c);
-      } else if (c.use_model_type == 'Fish-Audio') {
-        url = await FishAudioTTSTextToSpeech(c.use_speaker, e.msg, c);
+      } else if (c.use_model_type == 'AI-Hobbyist') {
+        url = await AIHobbyistTTSTextToSpeech(c.use_speaker, e.msg);
       } else {
         url = await BertVITSTextToSpeech(c.use_speaker, e.msg, c);
       }

@@ -1,6 +1,6 @@
 import { TextToSpeech as BertVITSTextToSpeech } from '../components/Bert-VITS2.js';
 import { TextToSpeech as GPTSoVITSTextToSpeech } from '../components/GPT-SoVITS.js';
-import { TextToSpeech as FishAudioTTSTextToSpeech } from '../components/Fish-Audio.js';
+import { TextToSpeech as AIHobbyistTTSTextToSpeech } from '../components/AI-Hobbyist.js';
 import plugin from '../../../lib/plugins/plugin.js'
 import Config from '../components/Config.js'
 import { getRecord } from '../components/Record.js'
@@ -37,8 +37,8 @@ export class TTS extends plugin {
 
     if (c.use_model_type == 'GPT-SoVITS') {
       url = await GPTSoVITSTextToSpeech(role, text, c);
-    } else if (c.use_model_type == 'Fish-Audio') {
-      url = await FishAudioTTSTextToSpeech(role, text, c);
+    } else if (c.use_model_type == 'AI-Hobbyist') {
+      url = await AIHobbyistTTSTextToSpeech(role, text);
     } else {
       url = await BertVITSTextToSpeech(role, text, c);
     }

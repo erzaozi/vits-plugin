@@ -1,6 +1,6 @@
 {
   "name": "vits-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "基于Yunzai-Bot的VITS插件，收集网络上各种各样的在线语音合成接口",
   "main": "index.js",
   "scripts": {
